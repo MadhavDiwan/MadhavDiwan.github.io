@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Madhav Diwan | Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Three.js Demo</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f0f0f0;
-      color: #333;
-    }
-    h1 {
-      color: #007acc;
-    }
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
   </style>
 </head>
 <body>
-  <h1>Hi, I'm Madhav Diwan</h1>
-  <p>Welcome to my portfolio website!</p>
-  <ul>
-    <li><strong>Project 1:</strong> Robot Navigation with ROS 2</li>
-    <li><strong>Project 2:</strong> AI Weed Detection System</li>
-    <li><strong>Project 3:</strong> 3D-Printed Cycloidal Drive</li>
-  </ul>
-  <p>📧 Reach me at: madhavdiwan7@gmail.com</p>
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    const light = new THREE.PointLight(0xffffff, 1, 100);
+    light.position.set(10, 10, 10);
+    scene.add(light);
+
+    camera.position.z = 5;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  </script>
 </body>
 </html>
