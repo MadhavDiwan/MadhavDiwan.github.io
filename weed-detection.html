@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Weed Detection - Madhav's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.caption { display: block; margin: -1.25rem 0 2rem 0; font-size: 0.8rem; font-style: italic; color: #888; text-align: center; }
+			.video-embed { max-width: 504px; margin: 0 auto 2rem auto; }
+			.video-embed iframe { display: block; width: 100%; height: 399px; border: 0; }
+		</style>
+	<link rel="stylesheet" href="assets/css/engineering.css" /></head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">&larr; All Projects</a></li>
+							<li class="active"><a href="weed-detection.html">Weed Detection</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">Autumn 2025</span>
+									<h1>Computer Vision<br />
+									Weed Detection</h1>
+									<p>A deep learning computer vision system that finds weeds in drone imagery,<br />
+									built for industry partner StevTech.<br />
+									Design in Mechanical and Mechatronic Systems (UTS Industry Studios).</p>
+								</header>
+								<section class="case-summary" aria-label="Project at a glance">
+	<div class="case-summary-text">
+		<dl>
+			<dt>Challenge</dt><dd>Locate weeds in drone imagery so growers can target treatment.</dd>
+			<dt>My contribution</dt><dd>Worked on a four-person team with StevTech and UTS mentors.</dd>
+			<dt>Result</dt><dd>The team presented a data and model architecture proposal. The project video shows the final outcomes.</dd>
+		</dl>
+		
+	</div>
+	<div class="case-summary-media"><div class="image main"><img src="images/weed_detection.jpg" alt="Weed Detection" /></div></div>
+</section>
+
+								<h2>Overview</h2>
+								<p>This was an industry project with <strong>StevTech</strong>, completed in the UTS Industry Studios subject Design in Mechanical and Mechatronic Systems. Our team developed a deep learning-based computer vision system that uses <strong>object detection</strong> to locate weeds in <strong>UAV (drone) imagery</strong>.</p>
+								<p>The goal was to help StevTech offer scalable precision agriculture solutions. Weed control today is costly, relies heavily on chemicals and needs a lot of labour. Detecting exactly where weeds are lets farmers treat only those areas.</p>
+								<p>I worked on the project with Shahd Sumrain, Jacob Ryan and Sanka Kotinkaduwa, with support from StevTech and our UTS Faculty of Engineering and IT mentors. The project ran in three phases: architecture development, data preparation, and model training and validation. Our solution proposal, presented in April 2025, set out the data and model architecture. Most of this page is based on that proposal, and the video below shows the final outcomes.</p>
+
+								<h2>Project Video</h2>
+								<p>Our short video covers the project journey and the final outcomes.</p>
+								<div class="video-embed">
+									<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7337015584699633664?compact=1" allowfullscreen="" loading="lazy" title="Weed detection project video on LinkedIn"></iframe>
+								</div>
+								<span class="caption">Project video, posted on LinkedIn by teammate Shahd Sumrain.</span>
+
+								<!-- TODO (Madhav): add a "My Role" section describing what you personally worked on
+								     (e.g. data ontology, annotation, model selection, training), plus "Results" and
+								     "What I Learned" sections once the final report details are available. -->
+
+								<h2>The Problem</h2>
+								<p>The <strong>fallow phase</strong> is the period between harvesting one crop and sowing the next. Weeds that emerge during it strip the soil of nutrients and moisture, which directly reduces the next crop&rsquo;s yield. Because the paddock should be bare soil at this stage, <em>any</em> living vegetation counts as a weed. That makes it a &ldquo;green on brown&rdquo; detection problem: find green plants against brown soil.</p>
+								<span class="image fit"><img src="images/weed-detection/green-on-brown.jpg" alt="Aerial image of bare fallow farmland with weeds circled in red" /></span>
+								<span class="caption">Green on brown weed detection: weeds circled in drone imagery of fallow farmland (StevTech, 2025).</span>
+								<p>Today, fallow weeds are mostly controlled by <strong>blanket spraying</strong> herbicide over the whole paddock. It&rsquo;s simple and it scales, but it ignores where the weeds actually are, which causes several problems:</p>
+								<ul>
+									<li><strong>Excessive chemical use.</strong> Weed-free areas get sprayed too. That wastes herbicide, raises costs, increases the risk of runoff and environmental contamination, and contributes to herbicide-resistant weeds.</li>
+									<li><strong>Labour shortages.</strong> Farms, especially mid-sized operations on tight margins, are short of workers and skilled agronomists. Repeated spray passes across the season add to the cost and workload.</li>
+									<li><strong>Farmer scepticism.</strong> Many farmers have tried technology that didn&rsquo;t deliver what it promised, so a new solution has to prove itself.</li>
+									<li><strong>Scalability.</strong> Existing detection systems struggle to scale to large farms and to cope with different soil types, lighting and terrain.</li>
+								</ul>
+								<p>Locating weeds precisely from drone imagery allows <strong>targeted spraying</strong> instead, so herbicide is applied only where it&rsquo;s needed.</p>
+
+								<h2>Data Architecture</h2>
+								<h3>Choosing the right labels</h3>
+								<p>Two questions from our literature review shaped how we labelled the data:</p>
+								<ul>
+									<li><strong>Classification or object detection?</strong> Classification models label a whole image as &ldquo;weeds&rdquo; or &ldquo;no weeds&rdquo;. They&rsquo;re simpler, but they struggle with mixed scenes and can&rsquo;t say <em>where</em> the weeds are. Object detection models such as YOLO and Faster R-CNN draw bounding boxes around each weed, which is the spatial information a sprayer needs. Instance segmentation (e.g. Mask R-CNN) is even more precise, but much more computationally expensive.</li>
+									<li><strong>Species or presence?</strong> Models that identify individual species can score highly on their own dataset but generalise poorly to new fields, soils and weed species. Even a highly accurate species-specific Mask R-CNN lost its generality on aerial data. Detecting <em>weed presence</em> generalises much better, and presence is what matters in the fallow phase.</li>
+								</ul>
+								<p>So we designed an <strong>object detection ontology</strong> that groups weeds by <strong>shape</strong>, not species. This follows practical field guides such as GRDC&rsquo;s <em>Common Weeds of Grain Cropping &ndash; The Ute Guide</em>, which group weeds by appearance. We also added classes for common obstacles, so the model learns not to confuse them with weeds:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Category</th><th>Classes</th><th>Notes</th></tr>
+										</thead>
+										<tbody>
+											<tr><td><strong>Weeds</strong></td><td>Broadleaf, Grassy/Grass-like, Woody shrub-like, Generalised green</td><td>Optional growth-stage attribute: seedling, vegetative or reproductive</td></tr>
+											<tr><td><strong>Obstacles / interference</strong></td><td>Farm infrastructure, Vegetation, Bodies of water, Machinery</td><td>Buildings, fences and powerlines; trees; ponds, swamps and creeks; farm equipment and vehicles</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>The growth-stage attribute is optional for now, but it gives StevTech room to make the system more detailed as it scales. The dataset was required to have at least <strong>500 instances per class</strong>, with a balanced class distribution.</p>
+
+								<h3>Data pipeline</h3>
+								<p>StevTech flies drones over the farm and stitches the images into a single <strong>orthomosaic</strong>. A script cuts the orthomosaic into <strong>512&nbsp;&times;&nbsp;512 image tiles</strong>, which are annotated in <strong>Encord</strong> using our ontology. The labelled tiles are then split and stored, ready for training on <strong>Azure ML</strong>.</p>
+								<span class="image fit"><img src="images/weed-detection/data-pipeline.png" alt="Data pipeline: collection, pre-processing, annotation, storage, training" /></span>
+								<span class="caption">Planned data pipeline, from drone imagery to model training.</span>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/weed-detection/dataset-structure.png" alt="Dataset folder structure with images and annotations split into train, val and test" /></span>
+										<span class="caption">Dataset folder structure.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<p>The dataset is split <strong>90% training</strong> and <strong>10% validation</strong>. The test set is separate: about <strong>100 new drone images</strong> the model has never seen, which gives an honest measure of how well it generalises to new fields.</p>
+										<p>Before training, we check dataset quality using:</p>
+										<ul>
+											<li><strong>Class distribution analysis.</strong> Histograms of annotations per class in Encord Analytics, to catch imbalance.</li>
+											<li><strong>Inter-annotator agreement.</strong> Label overlap (IoU) and class and attribute agreement between annotators, to make sure labelling is consistent.</li>
+										</ul>
+									</div>
+								</div>
+
+								<h3>Data augmentation</h3>
+								<p>Augmentation lets the model see variations it may meet in the field, such as lighting, weather, soil colour and camera angle, without collecting more imagery:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Type</th><th>Technique</th><th>What it simulates</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Geometric</td><td>Horizontal/vertical flip, rotation</td><td>Different camera angles and object orientations</td></tr>
+											<tr><td>Photometric</td><td>Brightness/contrast, colour jitter (hue, saturation)</td><td>Different lighting conditions and soil colours</td></tr>
+											<tr><td>Photometric</td><td>Gaussian noise and blur</td><td>Sensor noise and motion blur from the drone</td></tr>
+											<tr><td>Mixing</td><td>MixUp and CutMix</td><td>Regularisation; learning each class by its distinctive features</td></tr>
+										</tbody>
+									</table>
+								</div>
+
+								<h2>Model Architecture</h2>
+								<h3>Requirements</h3>
+								<p>Because the model is meant to solve a real agricultural problem, we set strict targets. Missed weeds (false negatives) and wasted spraying (false positives) both cost farmers money, and slow inference would hold up weed mapping.</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Metric</th><th>Target</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Accuracy</td><td>&ge;&nbsp;90%</td></tr>
+											<tr><td>Precision, recall and F1 score</td><td>&ge;&nbsp;90% each</td></tr>
+											<tr><td>Inference speed</td><td>10 FPS on a 16&nbsp;GB GPU (10,000 images in about 16.7 minutes)</td></tr>
+										</tbody>
+									</table>
+								</div>
+
+								<h3>Literature review</h3>
+								<ul>
+									<li><strong>Vision transformers for sugarcane disease.</strong> Of 12 architectures tested, DeiT3-Small performed best, with 93.79% accuracy, 91.27% precision and a 90.96% F1 score. It beat ResNet50, Xception, EfficientNetV2-Small, ViT-Base and Swin-Base, even on a small dataset of 6,748 images. DeiT is a <em>classification</em> model, though, so on its own it can&rsquo;t locate weeds.</li>
+									<li><strong>WeedVision (DETR vs RetinaNet).</strong> On a dataset of 203,567 weed images labelled by species and growth stage, <strong>RetinaNet</strong> outperformed DETR, with a mAP of 0.904 vs 0.840, and ran faster at 7.28 FPS. That makes it better suited to near-real-time use. Both models found young seedlings harder to detect than mature plants.</li>
+								</ul>
+
+								<h3>Selected architecture</h3>
+								<div class="row">
+									<div class="col-5 col-12-small">
+										<div class="table-wrapper">
+											<table>
+												<tbody>
+													<tr><td>Language</td><td>Python</td></tr>
+													<tr><td>Library</td><td>PyTorch</td></tr>
+													<tr><td>Model</td><td>RetinaNet (one-stage object detector)</td></tr>
+													<tr><td>Backbone</td><td>ResNet</td></tr>
+													<tr><td>Learning</td><td>Fine-tuning a COCO-pretrained model</td></tr>
+													<tr><td>Optimiser</td><td>Adam</td></tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="col-7 col-12-small">
+										<p><strong>RetinaNet</strong> is a one-stage detector that handles the large, varied datasets typical of agriculture efficiently and scales well to real-world use. ResNet was the best-performing backbone for RetinaNet in the literature. It also comes in different depths, so the model can grow with StevTech&rsquo;s dataset.</p>
+										<p>Instead of training from scratch, we planned to use <strong>transfer learning</strong>, fine-tuning a model pretrained on the COCO dataset. COCO includes potted plants, so the model starts with some useful features. Fine-tuning cuts computational cost, convergence time and the risk of overfitting on a smaller dataset.</p>
+									</div>
+								</div>
+
+								<h3>Validation and testing</h3>
+								<p>We planned to use <strong>TorchEval</strong> in PyTorch to measure accuracy, mAP, precision, recall and F1 score. Before committing to RetinaNet, we planned to test all <strong>six shortlisted architectures</strong> on StevTech&rsquo;s original simple dataset. That would confirm the choice for our use case and leave fallback options ready if problems came up.</p>
+								<p>To keep the comparison fair, the confidence threshold, number of epochs, learning rate and batch size were held constant across every model. The confidence threshold matters most, because it directly shifts precision, recall and F1. We also noted a limitation: a fixed number of epochs can disadvantage models that converge more slowly.</p>
+
+								<h2>Implementation Plan</h2>
+								<span class="image fit"><img src="images/weed-detection/timeline.png" alt="Project timeline from March to May 2025 showing architecture development, data preparation and training phases" /></span>
+								<span class="caption">Planned timeline, March to May 2025.</span>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Milestone</th><th>Duration</th><th>Target date</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Model and data architecture proposed and accepted</td><td>3 weeks</td><td>15 April 2025</td></tr>
+											<tr><td>Access to the Encord annotation platform</td><td>1 week</td><td>22 April 2025</td></tr>
+											<tr><td>Initial labelled dataset created</td><td>3 weeks</td><td>13 May 2025</td></tr>
+											<tr><td>Initial model trained</td><td>1 week</td><td>20 May 2025</td></tr>
+											<tr><td>Final handover: fine-tuned model, labelled dataset and performance report</td><td>1 week</td><td>27 May 2025</td></tr>
+										</tbody>
+									</table>
+								</div>
+
+								<ul class="actions special">
+									<li><a href="index.html" class="button">Back to Projects</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:madhavdiwan7@gmail.com">madhavdiwan7@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>LinkedIn</h3>
+								<p><a href="https://www.linkedin.com/in/madhav-diwan-3a1b08146/">Madhav Diwan</a></p>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Madhav Diwan</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,412 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Step Tracker - Madhav's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.caption { display: block; margin: -1.25rem 0 2rem 0; font-size: 0.8rem; font-style: italic; color: #888; text-align: center; }
+		</style>
+	<link rel="stylesheet" href="assets/css/engineering.css" /></head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">&larr; All Projects</a></li>
+							<li class="active"><a href="step-tracker.html">Step Tracker</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">Autumn 2025</span>
+									<h1>Step<br />
+									Tracker</h1>
+									<p>A handheld step counter and walking/running detector built around a custom 4-layer Arduino shield,<br />
+									an analog MEMS accelerometer and a 3D-printed enclosure.<br />
+									41070 Embedded Mechatronics Studio, UTS.</p>
+								</header>
+								<section class="case-summary" aria-label="Project at a glance">
+	<div class="case-summary-text">
+		<dl>
+			<dt>Challenge</dt><dd>Build a handheld device that counts steps and distinguishes walking from running.</dd>
+			<dt>My contribution</dt><dd>Designed the accelerometer interface and self-test circuit, drew the top-level schematic and wrote the step detection routine.</dd>
+			<dt>Result</dt><dd>The device counted 35 of 39 steps in a manual walking trial.</dd>
+		</dl>
+		
+	</div>
+	<div class="case-summary-media"><div class="image main"><img src="images/step-tracker/final-enclosure.jpg" alt="The finished step tracker in its black 3D-printed enclosure, with the LCD on top, a power switch and a red push button on the side" /></div>
+								<span class="caption">The finished step tracker, &ldquo;Project TNAM&rdquo;.</span></div>
+</section>
+
+								<h2>Overview</h2>
+								<p>In this studio, our team of four designed, built and tested a complete step tracker. It has three parts: a custom PCB shield that sits on an <strong>Arduino Uno R3</strong>, an <strong>ADXL335</strong> 3-axis analog accelerometer, and a 3D-printed enclosure that holds everything. The ADXL335 outputs acceleration on each axis as a voltage. The shield filters those signals to remove noise before the Arduino reads them, counts steps, and works out whether the user is walking or running.</p>
+								<p>The device has these features:</p>
+								<ul>
+									<li>A second-order analog low-pass filter on each axis to reduce noise.</li>
+									<li>Power from a 9&nbsp;V battery or an external supply through a barrel jack, with a switch to choose between them and a diode that protects against reverse polarity.</li>
+									<li>Status LEDs on every power rail, plus LEDs showing walking or running pace.</li>
+									<li>A 4-layer board with dedicated ground and power planes, and test points at key locations for troubleshooting.</li>
+									<li>A filtered Z-axis output on a BNC connector, so the signal can be viewed on an oscilloscope.</li>
+									<li>A 20&nbsp;&times;&nbsp;4 LCD over I&sup2;C, navigated with a single button.</li>
+									<li>On-demand 6-point calibration, a hardware self-test, and battery-voltage compensation.</li>
+									<li>A lightweight PLA enclosure printed at 15% infill, with sandwich-style assembly so it&rsquo;s easy to open and maintain.</li>
+								</ul>
+								<span class="image fit"><img src="images/step-tracker/inside-enclosure.jpg" alt="Inside the enclosure: the LCD, the green custom PCB shield and wiring" /></span>
+								<span class="caption">Inside the enclosure: the LCD, the custom shield, and wiring to the switch, button and battery.</span>
+
+								<h2>My Role</h2>
+								<p>I worked with Nicholas Surmon, Ashwen Kugan and Thishanth Thirumurugan. My teammates each specialised in one area: electronics, embedded software or mechanical. I took an all-round role instead, overseeing design decisions across all three areas, keeping the subsystems compatible, and acting as the link between the disciplines.</p>
+								<p>I come from a mechanical background, with strengths in 3D modelling, design for manufacture and integrating mechanical assemblies in SolidWorks and Fusion 360. I chose this subject to build the electronics and embedded skills a well-rounded mechatronics engineer needs, especially the ability to design and troubleshoot circuits on my own.</p>
+								<ul>
+									<li><strong>System architecture.</strong> I developed the system block diagrams and drew the top-level schematic that ties every subcircuit together.</li>
+									<li><strong>Electronics.</strong> I designed the accelerometer interface subcircuit, including the <strong>self-test (ST) pin driver</strong>. I selected its components and routed it on the PCB in Altium Designer.</li>
+									<li><strong>Embedded software.</strong> I wrote the <strong>step detection</strong> subroutine, <code>readStep()</code>, which counts steps from real-time accelerometer data.</li>
+									<li><strong>Hardware.</strong> I helped with assembly and enclosure fabrication, including soldering connectors to the PCB and preparing the 3D-printed parts.</li>
+								</ul>
+								<span class="image fit"><img src="images/step-tracker/altium-commits.jpg" alt="Commit history in the Altium Designer collaboration tool" /></span>
+								<span class="caption">My commits to the shared Altium project.</span>
+								<div class="row">
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/pcb-assembled.jpg" alt="Assembled PCB with spade connector wires soldered on" /></span>
+										<span class="caption">Spade connectors soldered to the PCB.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/enclosure-base-print.jpg" alt="3D-printed enclosure base with heat-set threaded inserts" /></span>
+										<span class="caption">Printed base with heat-set threaded inserts for mounting the PCB.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/lid-print.jpg" alt="The 3D-printed enclosure lid" /></span>
+										<span class="caption">The printed enclosure lid.</span>
+									</div>
+								</div>
+
+								<h2>System Architecture</h2>
+								<p>The block diagrams were the team&rsquo;s high-level blueprint for how power and data flow between the battery, the shield, the accelerometer, the Arduino and the peripherals. They kept the electronics aligned with the design requirements before anyone started detailed schematics.</p>
+								<span class="image fit"><img src="images/step-tracker/power-block-diagram.jpg" alt="Power block diagram showing 9 V, 5 V and 3.3 V distribution" /></span>
+								<span class="caption">Power distribution: 9&nbsp;V input, regulated down to 5&nbsp;V for the Arduino, LCD and buttons, and 3.3&nbsp;V for the accelerometer.</span>
+								<span class="image fit"><img src="images/step-tracker/signal-block-diagram.jpg" alt="Signal block diagram showing analog, digital and I2C connections" /></span>
+								<span class="caption">Signal flow: the sensor signals go through the analog filters to the Arduino and the BNC connector. The Arduino controls self-test and drives the LCD over I&sup2;C.</span>
+								<p>I drew the top-level schematic so the whole circuit could be split into separate sheets: accelerometer, filter, power, MCU and peripherals. It shows how those blocks connect. Teammates could then work on their own sheets in parallel, and debugging was easier because every connection between blocks was clearly defined. The filter sheet is instantiated three times, once for each axis.</p>
+								<span class="image fit"><img src="images/step-tracker/top-level-schematic.jpg" alt="Top-level schematic connecting the accelerometer, filter, MCU, peripherals and power sheets" /></span>
+								<span class="caption">Top-level schematic (drawn by me).</span>
+
+								<h2>ST Pin Driver Circuit</h2>
+								<p>My main hardware contribution was the circuit that enables the ADXL335&rsquo;s <strong>self-test mode</strong>. When the ST pin is pulled high (&ge;&nbsp;2.4&nbsp;V), the sensor applies a known internal electrostatic force to its sensing element. That produces a predictable voltage shift on each axis: typically &minus;325&nbsp;mV on X, +325&nbsp;mV on Y and +550&nbsp;mV on Z. Measuring those shifts checks the sensor&rsquo;s mechanical and electrical health without having to move it.</p>
+								<p>The challenge is voltage. The ADXL335 datasheet says the ST pin must never see more than V<sub>s</sub>&nbsp;+&nbsp;0.3&nbsp;V, about 3.6&nbsp;V. An Arduino GPIO pin outputs 5&nbsp;V, so driving the ST pin directly could damage the sensor. We therefore wrote the requirement for a ~3&nbsp;V test-pin voltage into the requirements list, and I designed a switch that lets the 5&nbsp;V Arduino control a 3.3&nbsp;V signal.</p>
+								<span class="image fit"><img src="images/step-tracker/st-driver-concept.jpg" alt="Concept of the ST pin driver: a switch to 3 V replaced by a P-channel MOSFET" /></span>
+								<span class="caption">Concept: replace a simple switch to +3&nbsp;V with a P-channel MOSFET high-side switch.</span>
+
+								<h3>How it works</h3>
+								<p>A P-channel MOSFET (Q2) acts as a high-side switch between the 3.3&nbsp;V rail and the ST pin:</p>
+								<ul>
+									<li><strong>Arduino pin LOW (0&nbsp;V).</strong> V<sub>GS</sub>&nbsp;=&nbsp;0&nbsp;&minus;&nbsp;3.3&nbsp;=&nbsp;&minus;3.3&nbsp;V, so the MOSFET turns fully on and connects 3.3&nbsp;V to the ST pin. Self-test is active.</li>
+									<li><strong>Arduino pin HIGH.</strong> The MOSFET turns off and self-test is inactive.</li>
+									<li><strong>R12 (100&nbsp;&Omega; gate resistor).</strong> Limits sudden current changes during switching, protecting the Arduino pin.</li>
+									<li><strong>R13 (10&nbsp;k&Omega; pull-up).</strong> Keeps the MOSFET off by default, so self-test only runs when the Arduino deliberately pulls the gate low.</li>
+								</ul>
+								<p>The sensor breakout plugs into a 6-pin 1.27&nbsp;mm Amphenol Minitek127 board-to-board connector. Test points TP1&ndash;TP4 give direct access to the three axis signals and the ST line for debugging.</p>
+								<span class="image fit"><img src="images/step-tracker/accelerometer-schematic.jpg" alt="Accelerometer interface schematic with the P-channel MOSFET ST pin driver and board-to-board connector" /></span>
+								<span class="caption">Accelerometer interface schematic, with the ST pin driver on the left.</span>
+
+								<h3>Choosing the MOSFET</h3>
+								<p>The two key parameters were the <strong>gate threshold voltage</strong>, which must be low enough for the MOSFET to turn fully on at V<sub>GS</sub>&nbsp;=&nbsp;&minus;3.3&nbsp;V, and the <strong>maximum drain current</strong>, which must comfortably exceed the ST pin&rsquo;s ~60&nbsp;&micro;A draw. I used ChatGPT to shortlist logic-level P-channel parts, then checked my choice against the manufacturer&rsquo;s datasheet. I chose the <strong>Diodes Inc. DMP2004K-7</strong> (SOT-23):</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Parameter</th><th>DMP2004K-7</th><th>Requirement</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Drain-source voltage</td><td>&minus;20&nbsp;V</td><td>&gt; 3.3&nbsp;V</td></tr>
+											<tr><td>Continuous drain current</td><td>&minus;600&nbsp;mA (&minus;1.9&nbsp;A pulsed)</td><td>&gt; 60&nbsp;&micro;A</td></tr>
+											<tr><td>Gate threshold voltage</td><td>&minus;0.5 to &minus;1.0&nbsp;V</td><td>Fully on at &minus;3.3&nbsp;V</td></tr>
+											<tr><td>Gate-source voltage limit</td><td>&plusmn;8&nbsp;V</td><td>Safe with 5&nbsp;V logic</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>With V<sub>GS</sub>&nbsp;=&nbsp;&minus;3.3&nbsp;V, well beyond the &minus;1.0&nbsp;V maximum threshold, the MOSFET operates in its fully-on region. Its current rating gives a very large margin over the microamp-level load.</p>
+
+								<h3>Learning from tutor feedback</h3>
+								<p>The first version of this circuit had two problems, which a tutor spotted during a lab review:</p>
+								<ul>
+									<li><strong>Wrong MOSFET.</strong> I had originally used an IRF9Z24SPBF, which isn&rsquo;t a logic-level MOSFET. It doesn&rsquo;t turn on fully with the gate voltages a microcontroller can provide.</li>
+									<li><strong>Wrong supply rail.</strong> The MOSFET source was connected to <strong>5&nbsp;V</strong> instead of 3.3&nbsp;V. That would have driven the ST pin above the sensor&rsquo;s supply voltage and could have permanently damaged it.</li>
+								</ul>
+								<p>I replaced the MOSFET with the logic-level DMP2004K-7 and moved its source to the 3.3&nbsp;V rail, matching the sensor&rsquo;s supply. Both mistakes taught me to check every interface voltage against the datasheet&rsquo;s absolute maximum ratings, not just the nominal values.</p>
+								<span class="image fit"><img src="images/step-tracker/faulty-schematic.jpg" alt="Original faulty schematic using the IRF9Z24SPBF with its source tied to 5 V" /></span>
+								<span class="caption">The original schematic, with the IRF9Z24SPBF and a 5&nbsp;V source connection.</span>
+
+								<h2>The Rest of the Shield</h2>
+								<h3>Power supply</h3>
+								<p>A three-position switch selects between the 9&nbsp;V battery and the barrel-jack input, and a 1N4001 diode protects against reverse polarity. Four 10&nbsp;&micro;F capacitors decouple the input. An L7805 regulator steps the input down to 5&nbsp;V for the Arduino and peripherals. It accepts up to 35&nbsp;V in and has thermal and short-circuit protection. An LF33CV low-dropout regulator then makes 3.3&nbsp;V for the accelerometer and filters. Each rail has an indicator LED, with a resistor sized to keep it well inside the LED&rsquo;s 20&nbsp;mA rating:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Rail</th><th>Resistor</th><th>Voltage across resistor</th><th>LED current</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>9&nbsp;V</td><td>715&nbsp;&Omega;</td><td>6.8&nbsp;V</td><td>9.51&nbsp;mA</td></tr>
+											<tr><td>5&nbsp;V</td><td>300&nbsp;&Omega;</td><td>2.8&nbsp;V</td><td>9.33&nbsp;mA</td></tr>
+											<tr><td>3.3&nbsp;V</td><td>150&nbsp;&Omega;</td><td>1.1&nbsp;V</td><td>7.33&nbsp;mA</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="image fit"><img src="images/step-tracker/power-schematic.jpg" alt="Power supply schematic with SPDT switch, reverse-polarity diode, L7805 and LF33CV regulators and rail LEDs" /></span>
+								<span class="caption">Power supply schematic (designed by Nicholas Surmon).</span>
+
+								<h3>Analog filter</h3>
+								<p>Each axis passes through a unity-gain buffer and then a <strong>second-order Butterworth low-pass filter</strong> in a Sallen-Key topology, built around MCP6031 rail-to-rail op-amps. The buffer is needed because the ADXL335 has about 32&nbsp;k&Omega; of internal output resistance. Connecting the filter directly would form a voltage divider and shift the cut-off frequency. A Butterworth filter has a maximally flat passband, and its &minus;40&nbsp;dB/decade roll-off is plenty for this application.</p>
+								<ul>
+									<li><strong>Cut-off frequency, about 32&nbsp;Hz.</strong> We based this on Usain Bolt&rsquo;s 100&nbsp;m record. Assuming an exaggerated 1.5&nbsp;m per step, he takes about 150 steps in 9 seconds, or 16.7&nbsp;Hz, so human steps are far below 32&nbsp;Hz. That cut-off keeps fast motion while removing higher-frequency noise. With R1&nbsp;=&nbsp;4.02&nbsp;k&Omega;, R2&nbsp;=&nbsp;4.48&nbsp;k&Omega;, C1&nbsp;=&nbsp;1.0&nbsp;&micro;F and C2&nbsp;=&nbsp;1.5&nbsp;&micro;F, <em>f<sub>c</sub></em>&nbsp;=&nbsp;1&nbsp;/&nbsp;(2&pi;&radic;(R1R2C1C2)) &asymp;&nbsp;31&ndash;32&nbsp;Hz. The ideal 1.4&nbsp;&micro;F capacitor couldn&rsquo;t be sourced, so we used 1.5&nbsp;&micro;F.</li>
+									<li><strong>Gain of 1.24.</strong> At its maximum output the ADXL335 reaches about 2.58&nbsp;V (3.6&nbsp;g &times; 0.3&nbsp;V/g + 1.5&nbsp;V offset). A gain of 1&nbsp;+&nbsp;R3/R4&nbsp;=&nbsp;1&nbsp;+&nbsp;2490/604&nbsp;=&nbsp;1.24 scales that up to about 3.2&nbsp;V, using more of the ADC range without clipping.</li>
+								</ul>
+								<span class="image fit"><img src="images/step-tracker/filter-schematic.jpg" alt="Analog filter schematic with buffer and Sallen-Key low-pass stage" /></span>
+								<span class="caption">Analog filter schematic (designed by Thishanth Thirumurugan).</span>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/filter-simulated.jpg" alt="Simulated filter frequency response" /></span>
+										<span class="caption">Simulated frequency response.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/filter-measured.jpg" alt="Measured filter frequency response on the lab analyser" /></span>
+										<span class="caption">Measured frequency response on the real board.</span>
+									</div>
+								</div>
+								<p>On the real board, the measured cut-off was <strong>35.5&nbsp;Hz</strong> on X and Y and <strong>36.3&nbsp;Hz</strong> on Z, with a gain of <strong>1.24</strong> on all three axes. That&rsquo;s close to the design values. The pace LEDs are switched by N-channel MOSFET (DMN2005K-7) low-side drivers, so the Arduino pins never supply LED current directly.</p>
+
+								<h2>PCB Design</h2>
+								<p>We chose a <strong>4-layer board</strong> instead of a standard 2-layer one, on a tutor&rsquo;s advice. The two inner layers are solid ground and power planes. They give every signal a short, clean return path, act as shields against electromagnetic interference, and free up the outer layers for routing. A 4-layer board costs more, but the improvement in signal integrity for the sensitive analog lines justified it.</p>
+								<span class="image fit"><img src="images/step-tracker/pcb-stackup.jpg" alt="4-layer PCB stackup: top signal, ground plane, power plane, bottom signal" /></span>
+								<span class="caption">Layer stackup: signal / GND / power / signal.</span>
+								<p>We set design rules to match the manufacturer&rsquo;s capabilities and each net&rsquo;s electrical needs:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Rule</th><th>Value</th><th>Reason</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Minimum clearance</td><td>6&nbsp;mil (0.15&nbsp;mm)</td><td>Manufacturer&rsquo;s minimum tolerance; prevents shorts</td></tr>
+											<tr><td>Power track width</td><td>20&nbsp;mil (0.50&nbsp;mm)</td><td>Carries higher current with less voltage drop and heat</td></tr>
+											<tr><td>Ground track width</td><td>20&nbsp;mil (0.50&nbsp;mm)</td><td>Low-resistance, stable return paths; better EMI performance</td></tr>
+											<tr><td>Signal track width</td><td>8&nbsp;mil (0.20&nbsp;mm)</td><td>Balances signal integrity, space and manufacturability</td></tr>
+											<tr><td>Via</td><td>0.6&nbsp;mm diameter, 0.3&nbsp;mm hole</td><td>Reliable layer transitions within standard fabrication limits</td></tr>
+											<tr><td>Hole size</td><td>0.3&ndash;25.4&nbsp;mm</td><td>Fits both vias and through-hole parts</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>I defined an Altium &ldquo;room&rdquo; for the ST pin driver, so its components stayed grouped together during layout. I then placed and routed the MOSFET, resistors, connector and test points to keep traces short and direct.</p>
+								<div class="row">
+									<div class="col-5 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/room-definition.jpg" alt="Altium room definition for the ST pin driver" /></span>
+										<span class="caption">Room definition for the ST pin driver.</span>
+									</div>
+									<div class="col-7 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/st-driver-layout.jpg" alt="Close-up of the ST pin driver layout in 3D, all layers, and top layer views" /></span>
+										<span class="caption">My ST pin driver layout: 3D, all layers, and top copper.</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/pcb-layout.jpg" alt="Full PCB layout" /></span>
+										<span class="caption">Full board layout.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/pcb-3d.jpg" alt="3D render of the finished PCB shield" /></span>
+										<span class="caption">3D render of the finished shield.</span>
+									</div>
+								</div>
+
+								<h2>Enclosure and Assembly</h2>
+								<p>The enclosure, designed by Ashwen Kugan, is a two-part PLA print. Electronics stack inside it in layers: the Arduino at the bottom, the shield on top of it, then the LCD. Nine M3 brass heat-set inserts, pressed in at 350&ndash;400&nbsp;&deg;C, give strong threads for the M3 bolts that hold the boards and the lid. The power switch and push button mount in side cutouts, and a holder keeps the 9&nbsp;V battery clear of the wiring. Arrows on the lid mark the X and Y sensor axes.</p>
+								<span class="image fit"><img src="images/step-tracker/enclosure-exploded.jpg" alt="Exploded view of the enclosure showing lid, LCD, PCB shield, Arduino, base, button and switch" /></span>
+								<span class="caption">Exploded view of the enclosure.</span>
+								<div class="row">
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/enclosure-cad.jpg" alt="CAD model of the closed enclosure" /></span>
+										<span class="caption">Closed enclosure model.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/assembly-base.jpg" alt="Enclosure base with heat-set insert locations" /></span>
+										<span class="caption">Assembly step 1: base with inserts.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/assembly-pcb.jpg" alt="Arduino and PCB shield mounted in the enclosure base" /></span>
+										<span class="caption">Assembly step 2: Arduino and shield mounted.</span>
+									</div>
+								</div>
+
+								<h2>Embedded Software</h2>
+								<p>The firmware runs a <strong>fully non-blocking</strong> main loop. Sensor readings, display updates, LED blinking and self-tests all run together, with none of them waiting on the others. A single button on pin 3 controls three states:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>State</th><th>What it shows or does</th><th>Button</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Main screen</td><td>Step count, pace (walking/running), calibrated X/Y/Z acceleration and reference voltage</td><td>Press: self-test. Hold &ge;&nbsp;3&nbsp;s: calibration</td></tr>
+											<tr><td>Self-test</td><td>Pass/fail result and the X, Y, Z voltages before and after self-test</td><td>Press: return to main screen</td></tr>
+											<tr><td>Calibration</td><td>Guides the user through placing each axis up and down in turn</td><td>Press: next orientation; return to main screen when finished</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<ul>
+									<li><strong>Calibration.</strong> A 6-point routine records the voltage with each axis pointing up and then down. From those readings it calculates each axis&rsquo;s zero-g offset and sensitivity, which vary between individual sensors.</li>
+									<li><strong>Battery compensation.</strong> During integration, readings drifted. A multimeter showed the Arduino&rsquo;s 5&nbsp;V pin at only 3.8&nbsp;V because the battery was going flat, and that lowered the ADC reference. The fix was to measure the actual supply voltage against the chip&rsquo;s fixed 1.1&nbsp;V internal reference and use it in every conversion.</li>
+									<li><strong>Pace identification.</strong> The Z-axis is sampled at 20&nbsp;Hz into a 64-sample buffer. The firmware applies a Hamming window and runs an <strong>FFT</strong> to find the dominant frequency. Above 3&nbsp;Hz the pace is classed as running, and at or below as walking. The pace LEDs on pins 5 and 6 show the result, and a heartbeat LED on pin 4 blinks at 2&nbsp;Hz.</li>
+									<li><strong>Self-test.</strong> The firmware toggles the ST pin through my driver circuit and checks that each axis shifts by an amount within the datasheet range. It runs five iterations, and all five must pass.</li>
+								</ul>
+
+								<h2>Step Detection</h2>
+								<p>I wrote the <code>readStep()</code> subroutine, which detects individual steps from peaks in the Z-axis acceleration. To choose a threshold, I recorded acceleration data with the Phyphox app on a phone while walking. Over 10 steps, the Z-axis and total acceleration showed clear, regular peaks between <strong>12 and 15&nbsp;m/s&sup2;</strong>. I set the threshold at 12.5&nbsp;m/s&sup2;, which catches real steps but ignores small hand movements and noise.</p>
+								<span class="image fit"><img src="images/step-tracker/phyphox-steps.jpg" alt="Acceleration vs time over 10 steps, showing periodic peaks in Z and absolute acceleration" /></span>
+								<span class="caption">Acceleration over 10 steps, recorded with Phyphox. Each step appears as a peak of about 12&ndash;15&nbsp;m/s&sup2;.</span>
+								<p>The algorithm keeps the five most recent samples in a <strong>circular buffer</strong>. It treats the middle sample as a candidate peak, which must be larger than every other sample in the buffer, a true local maximum. A step is counted only if the candidate is a local maximum, exceeds 12.5&nbsp;m/s&sup2;, and at least <strong>200&nbsp;ms</strong> have passed since the last step. That debounce stops one long, high-acceleration footfall from being counted twice. Threshold-based peak detection is simple and cheap to run, which suits a low-power microcontroller and avoids complex digital filtering.</p>
+								<div class="row">
+									<div class="col-7 col-12-small">
+<pre><code>void readStep() {
+  if (!accelBufferFilled) return;
+
+  // Use the middle sample as the candidate peak.
+  int midIndex = accelBufferSize / 2;
+  float candidate = fabs(accelBuffer[midIndex]);
+
+  // Check it is the highest value in the buffer.
+  bool isPeak = true;
+  for (int i = 0; i &lt; accelBufferSize; i++) {
+    if (i != midIndex &amp;&amp;
+        candidate &lt;= fabs(accelBuffer[i])) {
+      isPeak = false;
+      break;
+    }
+  }
+
+  // Count a step if it is a valid peak above the
+  // threshold and the debounce timer is ready.
+  if (isPeak &amp;&amp; candidate &gt; accStepThreshold &amp;&amp;
+      stepDebounceTimer.ready()) {
+    steps++;
+    stepDebounceTimer.update();
+  }
+}</code></pre>
+									</div>
+									<div class="col-5 col-12-small">
+										<span class="image fit"><img src="images/step-tracker/readstep-flowchart.jpg" alt="Flowchart of the readStep subroutine" /></span>
+										<span class="caption">Flowchart of <code>readStep()</code>.</span>
+									</div>
+								</div>
+								<p>The first version counted steps while the device sat still on a desk, because noise kept crossing the threshold. Requiring a true local maximum within the buffer, together with the 12.5&nbsp;m/s&sup2; minimum, fixed that. Some real steps were then being missed, so I tuned the debounce time and buffer size until accuracy was within tolerance.</p>
+
+								<h2>Testing and Results</h2>
+								<p>We brought up the board one subsystem at a time against a structured test plan. The lab supply was current-limited to 500&nbsp;mA, and each subcircuit was populated and verified before moving on.</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Test</th><th>Measured</th><th>Result</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>5&nbsp;V rail</td><td>4.9&nbsp;V</td><td>Pass</td></tr>
+											<tr><td>3.3&nbsp;V rail</td><td>3.29&nbsp;V</td><td>Pass</td></tr>
+											<tr><td>ST pin driver, standalone</td><td>3&nbsp;V at the ST pin when the gate is low; off when high</td><td>Pass</td></tr>
+											<tr><td>0&nbsp;g bias, all axes (after 1.24 gain)</td><td>2.05&nbsp;V (1.65&nbsp;V at the sensor)</td><td>Pass</td></tr>
+											<tr><td>Self-test output change, with gain</td><td>X 450&nbsp;mV, Y 502&nbsp;mV, Z 900&nbsp;mV</td><td>Pass</td></tr>
+											<tr><td>RMS noise, before / after filter</td><td>X 1.0 / 0.4&nbsp;mV, Y 1.0 / 0.3&nbsp;mV, Z 2.0 / 0.3&nbsp;mV</td><td>Pass</td></tr>
+											<tr><td>Sensitivity, with gain</td><td>X 371, Y 382, Z 370&nbsp;mV/g</td><td>Pass</td></tr>
+											<tr><td>Current draw, without / with Arduino</td><td>30&nbsp;mA / 120&nbsp;mA (limit 250&nbsp;mA)</td><td>Pass</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>The filter cut RMS noise by more than half on every axis, and by about 85% on Z. The sensitivity values match the ADXL335&rsquo;s nominal 300&nbsp;mV/g once the filter&rsquo;s 1.24 gain is included.</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Software test</th><th>Result</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>No steps counted while idle</td><td>Pass</td></tr>
+											<tr><td>Walking accuracy (counted manually)</td><td><strong>35 / 39 steps</strong> (~10% error, within tolerance)</td></tr>
+											<tr><td>Only one step counted per footfall (debounce)</td><td>Pass</td></tr>
+											<tr><td>Vigorous shaking doesn&rsquo;t produce false steps or crash the tracker</td><td>Pass</td></tr>
+											<tr><td>Self-test, including while shaking</td><td>5 / 5 iterations pass</td></tr>
+											<tr><td>Self-test with X and Y inputs swapped</td><td>Fails, as intended</td></tr>
+											<tr><td>Reading flat after calibration (target 0, 0, &minus;9.8&nbsp;m/s&sup2;)</td><td>0.2, &minus;0.1, &minus;9.7&nbsp;m/s&sup2;</td></tr>
+											<tr><td>Calibration on a low battery (3.6&nbsp;V reference)</td><td>Same readings, Pass</td></tr>
+											<tr><td>Walking/running identification, LEDs and display</td><td>Pass</td></tr>
+											<tr><td>Button: press vs hold, no accidental fast switching</td><td>Pass</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="image fit"><img src="images/step-tracker/prototype-test.jpg" alt="Early breadboard prototype with LCD, LEDs and button" /></span>
+								<span class="caption">Breadboard prototype used for early firmware testing.</span>
+
+								<h2>What I Learned</h2>
+								<ul>
+									<li><strong>Read the absolute maximum ratings.</strong> The ST pin driver taught me to check every interface voltage against the datasheet limits. A 5&nbsp;V logic signal on a 3.6&nbsp;V-max pin is an easy mistake to make, and it can permanently damage a part.</li>
+									<li><strong>Logic-level MOSFETs.</strong> Choosing a MOSFET properly took me through gate threshold voltage, drain current, power dissipation and V<sub>GS</sub> limits. Using AI tools to build a shortlist was useful, but the final choice still had to be confirmed against the real datasheet.</li>
+									<li><strong>Data-driven algorithm design.</strong> Recording real walking data before picking a threshold, and then testing edge cases like idling and shaking, made the step counter far more robust than guessing values would have.</li>
+									<li><strong>Layout matters.</strong> Ground and power planes, sensible design rules and room-based placement all contribute to clean analog signals.</li>
+									<li><strong>Integration is its own skill.</strong> Taking a cross-discipline role showed me how often problems sit at the boundaries: a falling battery voltage affecting ADC readings,, or a 5&nbsp;V rail wired to a 3.3&nbsp;V sensor pin. A mechanical engineer who understands the electronics and the code can catch them early.</li>
+								</ul>
+
+								<ul class="actions special">
+									<li><a href="index.html" class="button">Back to Projects</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:madhavdiwan7@gmail.com">madhavdiwan7@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>LinkedIn</h3>
+								<p><a href="https://www.linkedin.com/in/madhav-diwan-3a1b08146/">Madhav Diwan</a></p>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Madhav Diwan</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+

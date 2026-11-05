@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Warman Design and Build Competition - Madhav's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.caption { display: block; margin: -1.25rem 0 2rem 0; font-size: 0.8rem; font-style: italic; color: #888; text-align: center; }
+		</style>
+	<link rel="stylesheet" href="assets/css/robot-viewer.css" /><link rel="stylesheet" href="assets/css/engineering.css" /></head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">&larr; All Projects</a></li>
+							<li class="active"><a href="warman.html">Warman Design and Build Competition</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December 2024</span>
+									<h1>Warman Design<br />
+									and Build Competition</h1>
+									<p>An autonomous robot built to collect six &ldquo;seed pods&rdquo; from a competition track<br />
+									and drop them into an incinerator within 120 seconds.<br />
+									41059 Mechanical Design Fundamentals Studio 1, UTS.</p>
+								</header>
+								<section class="case-summary" aria-label="Project at a glance">
+	<div class="case-summary-text">
+		<dl>
+			<dt>Challenge</dt><dd>Collect six seed pods and deliver them to an incinerator within 120 seconds.</dd>
+			<dt>My contribution</dt><dd>Led the team, designed the chassis, built the SolidWorks assembly and wrote the Arduino control code.</dd>
+			<dt>Result</dt><dd>The chassis met the tested requirements. The integrated robot underperformed on competition day.</dd>
+		</dl>
+		<p><a href="#robot-heading">Explore the 3D assembly &rarr;</a></p>
+	</div>
+	<div class="case-summary-media"><div class="image main"><img src="images/warman/team.jpg" alt="The team standing behind the robot at the competition track" /></div>
+								<span class="caption">Left to right: Jaydn Tran, Yu Chia Chang, Madhav Diwan, Toon Janssen and our mentor, Morgan Sheather-Reid.</span></div>
+</section>
+
+								<h2>Overview</h2>
+								<p>In the Weir Warman Design &amp; Build Competition, student engineering teams from universities around the world design and build a machine to complete a set task as fast and reliably as possible. Each year has a new brief. The 37th competition was themed <strong>Project FAMINE</strong>: invasive seed pods on the fictional planet Gondwana threaten local farmland, and the machine must collect them and drop them into an incinerator before they burst and spread.</p>
+								<p>The seed pods are six tennis balls. Four sit on M12 nuts on the two raised platforms, and two sit on top of &ldquo;trees&rdquo;, galvanised steel pipes 150&nbsp;mm and 300&nbsp;mm tall. The robot has <strong>120 seconds</strong> to collect them all and drop them through a 120&nbsp;mm hole in the middle of the track. It must also start inside a 400&nbsp;&times;&nbsp;400&nbsp;&times;&nbsp;400&nbsp;mm envelope and weigh less than 6&nbsp;kg.</p>
+								<p>The course ran the project as a series of design artefacts: modelling the track, designing and testing the chassis, developing a drive and control system, and finally competing on demonstration day.</p>
+
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/final-robot.jpg" alt="Final robot with its twin extending arms" /></span>
+										<span class="caption">The final robot on the competition track.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<h3>How the robot works</h3>
+										<p>The robot has three subsystems:</p>
+										<ul>
+											<li><strong>Chassis.</strong> A laser-cut plywood frame that DC motors drive up and down the track. It carries the batteries, the Arduino and the other two subsystems.</li>
+											<li><strong>Worm gear.</strong> Mounted near the chassis&rsquo; centre of gravity. It rotates the arm assembly to line up with each ball.</li>
+											<li><strong>Twin-arm extension.</strong> Extends outward in two stages until it sits under a ball. It then tilts slowly so the ball rolls down the rail into the chassis, which holds it until the robot drops it into the incinerator.</li>
+										</ul>
+									</div>
+								</div>
+
+								<section class="robot-viewer" aria-labelledby="robot-heading">
+<h2 id="robot-heading">Explore the robot in 3D</h2>
+<p>Explore the full CAD assembly. Drag to rotate and scroll or pinch to zoom.</p>
+<model-viewer id="robot-model" alt="Warman robot CAD assembly with chassis, wheels, gearbox and twin extending arms" camera-controls touch-action="pan-y" camera-orbit="0deg 75deg 105%" shadow-intensity="1" interaction-prompt="none"></model-viewer>
+<div class="robot-controls"><button type="button" id="load-robot">Load 3D model (8.2 MB)</button><button type="button" id="reset-robot" disabled>Reset view</button><a href="assets/models/warman-robot.glb" download>Download GLB</a></div>
+<p id="robot-status" role="status" aria-live="polite">Load the model to rotate and zoom.</p>
+<noscript><p>Enable JavaScript for the viewer, or download the GLB above.</p></noscript>
+</section><h2>My Role</h2>
+								<p>I led the team. I designed the chassis, built the full SolidWorks assembly that brought every subsystem together, and wrote the Arduino control code. I also modelled the competition track and produced its engineering drawings.</p>
+								<p>Halfway through the course, half of our original team left. As team leader, I took on much of the remaining design, CAD and programming work so we could still get a robot onto the track. It was overwhelming at first, but it taught me more about leadership, prioritising and staying adaptable than any other part of the project.</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Team member</th><th>Role</th><th>Responsibilities</th></tr>
+										</thead>
+										<tbody>
+											<tr><td><strong>Madhav Diwan</strong></td><td>Team Lead &amp; Mechanical Design</td><td>Chassis design, SolidWorks assembly, coding</td></tr>
+											<tr><td>Jaydn Tran</td><td>Electrical Design</td><td>Arm extension</td></tr>
+											<tr><td>Yu Chia Chang</td><td>Mechanical Design</td><td>Arm gearbox</td></tr>
+											<tr><td>Toon Janssen</td><td>Mechanical Design</td><td>Alternative CAD design</td></tr>
+										</tbody>
+									</table>
+								</div>
+
+								<h2>Track Design</h2>
+								<p>Before designing the robot, I modelled the competition track in SolidWorks to the official specification. That gave the team an accurate digital environment for checking reach, clearances and arm angles. I also produced a general assembly drawing and an exploded-view drawing with a full bill of materials.</p>
+								<span class="image fit"><img src="images/warman/track-schematic.jpg" alt="Schematic of the competition track showing platforms, seed pods, trees and incinerator" /></span>
+								<span class="caption">Track layout: the base plane, the two raised platforms, the seed pods, the tree assemblies and the incinerator hole.</span>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/track-cad.jpg" alt="Isometric CAD model of the Warman track" /></span>
+										<span class="caption">Isometric CAD model.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/track-exploded.jpg" alt="Exploded-view drawing of the Warman track with bill of materials" /></span>
+										<span class="caption">Exploded view with bill of materials.</span>
+									</div>
+								</div>
+								<p>The track is a 2400&nbsp;mm long, 1200&nbsp;mm wide base with a 600&nbsp;mm raised platform at each end. The platforms are 18&nbsp;mm MDF on screwed support strips: six 582&nbsp;mm strips and two 1200&nbsp;mm strips. Four M12 hex nuts mark the ground-level ball positions. The two trees are 20&nbsp;mm pipes on flanges, fixed with self-tapping screws on a 59&nbsp;mm pitch circle. The drawing notes specify the finish: every upper surface gets a water-based Estapol sealer and then two coats of matt polyurethane, so the track survives repeated runs.</p>
+								<span class="image fit"><img src="images/warman/track-drawing.jpg" alt="General assembly drawing of the Warman track" /></span>
+								<span class="caption">General assembly drawing with the key dimensions and tolerances.</span>
+								<p>The Engineers Australia Code of Ethics asks engineers to promote sustainability. With that in mind, I also looked at how the track could be built from recycled plastic or composite panels, and how biodegradable or recyclable parts would keep it from becoming long-term waste once the competition is over.</p>
+
+								<h2>Chassis Design</h2>
+								<h3>Concept selection</h3>
+								<p>I broke the chassis into two subfunctions, <em>movement</em> and <em>structure</em>, and compared options for each in a morphological table. For movement I looked at mecanum, omni, ball-caster, tank-track and standard wheels. For structure I compared wood, aluminium, PVC, steel, acrylic, cardboard and PLA. Each option got a short pros and cons summary.</p>
+								<span class="image fit"><img src="images/warman/morph-table.jpg" alt="Morphological table comparing drive configurations and frame materials" /></span>
+								<span class="caption">Morphological table of drive layouts and frame materials, with pros and cons.</span>
+								<p>I combined five promising options into full concepts and scored each against weighted criteria:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Criteria</th><th>Weight</th><th>A: Wood, 4 support + 2 powered</th><th>B: Aluminium, 4 support + 2 powered</th><th>C: PLA + acrylic, 4 mecanum</th><th>D: Acrylic, ball + 2 standard</th><th>E: Aluminium, 4 omni</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Weight</td><td>25%</td><td>5</td><td>3</td><td>2</td><td>3</td><td>2</td></tr>
+											<tr><td>Affordability</td><td>20%</td><td>5</td><td>3</td><td>2</td><td>3</td><td>2</td></tr>
+											<tr><td>Ease of assembly</td><td>15%</td><td>4</td><td>3</td><td>4</td><td>3</td><td>3</td></tr>
+											<tr><td>Durability</td><td>20%</td><td>2</td><td>4</td><td>2</td><td>2</td><td>4</td></tr>
+											<tr><td>Modularity</td><td>10%</td><td>3</td><td>4</td><td>5</td><td>3</td><td>4</td></tr>
+											<tr><td>Compatibility</td><td>10%</td><td>3</td><td>4</td><td>3</td><td>3</td><td>4</td></tr>
+										</tbody>
+										<tfoot>
+											<tr><td>Total</td><td>100%</td><td><strong>77</strong></td><td>68</td><td>54</td><td>56</td><td>59</td></tr>
+										</tfoot>
+									</table>
+								</div>
+								<p>The <strong>wooden frame with four support wheels and two powered wheels</strong> won, mainly because it was light, cheap and easy to laser-cut and rework. Aluminium was more durable but heavier and harder to assemble. Mecanum and omni wheels gave better manoeuvrability, but at a higher cost, weight and control complexity than a first prototype needed.</p>
+
+								<h3>Prototyping: low to high fidelity</h3>
+								<p>The first concept was based on a dolly: a rectangular tab-and-slot frame joined with T-connectors, with fixed caster wheels at the corners and two driven wheels moving it back and forth. I then moved towards a <strong>drop-centre</strong> layout, inspired by a 6-wheel competition robot drive base. Lowering the middle wheels slightly lets the robot pivot on them, which makes turning much easier than with a flat six-wheel base.</p>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-initial.jpg" alt="Initial dolly-style chassis CAD model" /></span>
+										<span class="caption">Initial dolly-style concept.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-inspiration.jpg" alt="Drop-centre robot drive base used as inspiration" /></span>
+										<span class="caption">Inspiration: a drop-centre competition drive base.</span>
+									</div>
+								</div>
+								<p><strong>Low fidelity.</strong> No 6&nbsp;mm plywood was available, so I laser-cut the SolidWorks parts from two 3&nbsp;mm cardboard sheets and taped them together for the full 6&nbsp;mm thickness. Skewers taped along the sides, or slid between the layers, stopped the cardboard bending, and the frame was hot-glued together. This cheap, quick model confirmed the overall size and layout and showed where the pickup arm would mount.</p>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-lowfi-cad.jpg" alt="Low-fidelity chassis CAD model" /></span>
+										<span class="caption">Low-fidelity CAD.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-lowfi-build.jpg" alt="Laser-cut cardboard low-fidelity chassis" /></span>
+										<span class="caption">Laser-cut cardboard prototype.</span>
+									</div>
+								</div>
+								<p><strong>Medium fidelity.</strong> The second version was laser-cut plywood. It added custom 3D-printed caster wheels running on M8 bolt axles, plus extra member holders to strengthen the corners and support the wheels. This was the first version that could carry the real subsystems.</p>
+								<div class="row">
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-medfi-cad.jpg" alt="Medium-fidelity chassis CAD model" /></span>
+										<span class="caption">Medium-fidelity CAD.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-medfi-build.jpg" alt="Assembled plywood medium-fidelity chassis, top-down view" /></span>
+										<span class="caption">Assembled plywood frame.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-medfi-arm.jpg" alt="Medium-fidelity chassis CAD with integrated arm assembly" /></span>
+										<span class="caption">With the arm assembly integrated.</span>
+									</div>
+								</div>
+								<p><strong>High fidelity.</strong> The final chassis is slightly smaller, so it fits easily inside the 400&nbsp;mm starting cube. It has more room for electronics and wiring, dedicated mounts for the DC motors, and holes in the inner members for the worm gear subsystem.</p>
+								<div class="row">
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-final-cad.jpg" alt="Final chassis CAD with DC motor mounts" /></span>
+										<span class="caption">Final CAD with motor mounts.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-cad.jpg" alt="Final chassis CAD with worm gear mounting plate" /></span>
+										<span class="caption">Final CAD with the worm gear mount.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-build.jpg" alt="Built chassis with motors, wiring and Arduino" /></span>
+										<span class="caption">Built and wired.</span>
+									</div>
+								</div>
+
+								<h3>Engineering analysis</h3>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/cog-diagram.jpg" alt="Box model of the chassis showing the centre of gravity at 200, 200, 32.5 mm" /></span>
+										<span class="caption">Centre of gravity model.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<p><strong>Centre of gravity.</strong> I modelled the chassis as a uniform 400&nbsp;&times;&nbsp;400&nbsp;&times;&nbsp;65&nbsp;mm box, which puts its centre of gravity at its geometric centre, (200, 200, 32.5)&nbsp;mm. Heavy parts such as the worm gear were mounted as close to that point as possible. That keeps the robot from tipping when the arm swings out with a ball on the end.</p>
+									</div>
+								</div>
+								<p><strong>Drive torque.</strong> I checked the motors against a worst case: chassis plus payload of 5.5&nbsp;kg on six wheels, two of them driven.</p>
+								<div class="table-wrapper">
+									<table>
+										<tbody>
+											<tr><td>Total mass</td><td>5.5&nbsp;kg</td></tr>
+											<tr><td>Wheels / driven wheels</td><td>6 / 2</td></tr>
+											<tr><td>Wheel radius</td><td>0.0325&nbsp;m</td></tr>
+											<tr><td>Target acceleration</td><td>0.3&nbsp;m/s&sup2;</td></tr>
+											<tr><td>Rolling resistance coefficient</td><td>0.02</td></tr>
+											<tr><td>Rolling resistance (all wheels)</td><td>1.08&nbsp;N</td></tr>
+											<tr><td>Acceleration force</td><td>1.65&nbsp;N</td></tr>
+											<tr><td>Total drive force</td><td>2.73&nbsp;N</td></tr>
+											<tr><td><strong>Torque per driven wheel</strong></td><td><strong>0.044&nbsp;N&middot;m</strong></td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>The TT DC motors have a 1.0&nbsp;N&middot;m stall torque, more than 20 times the requirement. Testing on demonstration day confirmed this, with the chassis moving loads of up to 5.5&nbsp;kg.</p>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/beam-diagram.jpg" alt="Fixed-fixed beam under a uniformly distributed load" /></span>
+										<span class="caption">Fixed-fixed beam model of a chassis member.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<p><strong>Beam deflection.</strong> I modelled one 50&nbsp;&times;&nbsp;6&nbsp;mm plywood chassis member as a 150&nbsp;mm fixed-fixed beam under a uniformly distributed load. Its second moment of area is <em>I</em> = <em>bh</em>&sup3;/12 = 9&nbsp;&times;&nbsp;10<sup>&minus;10</sup>&nbsp;m&#8308;, and the predicted maximum deflection is about <strong>0.11&nbsp;mm</strong>. The thin plywood members are easily stiff enough for the loads on the robot.</p>
+									</div>
+								</div>
+
+								<h3>Testing and validation</h3>
+								<p>I tested the finished chassis against the competition and design requirements:</p>
+								<ul>
+									<li><strong>Weight.</strong> I weighed it on a scale to confirm it was well under the 6&nbsp;kg limit.</li>
+									<li><strong>Size.</strong> I placed it in a 400&nbsp;&times;&nbsp;400&nbsp;&times;&nbsp;400&nbsp;mm acrylic enclosure with all subsystems mounted, to check it fit the starting envelope.</li>
+									<li><strong>Fit and compatibility.</strong> I mounted the major subsystems at their specified points and ran the chassis on the real track.</li>
+									<li><strong>Load capacity.</strong> It carried an 8&nbsp;kg payload of two 4&nbsp;kg dumbbells and stayed stable, well beyond what the competition requires.</li>
+								</ul>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/weight-check.jpg" alt="Chassis being weighed on a bathroom scale" /></span>
+										<span class="caption">Weight check.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/enclosure-fit.jpg" alt="Chassis sitting inside a 400 mm acrylic enclosure" /></span>
+										<span class="caption">Fit inside the 400&nbsp;mm starting envelope.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/chassis-track-top.jpg" alt="Chassis with arm rails positioned on the track next to a ball" /></span>
+										<span class="caption">Checking arm reach on the track.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/arm-on-track.jpg" alt="Robot with arm assembly being set up on the track" /></span>
+										<span class="caption">The full robot being set up for a run.</span>
+									</div>
+								</div>
+								<span class="image fit"><img src="images/warman/payload-dumbbells.jpg" alt="Chassis carrying two 4 kg dumbbells" /></span>
+								<span class="caption">Load test with an 8&nbsp;kg payload.</span>
+
+								<h2>Mecanum Wheel Control</h2>
+								<p>Alongside the competition chassis, I built and programmed a four-wheel mecanum drive base. Mecanum wheels are widely used where robots need to move precisely in tight spaces, such as warehouses and factories. Each mecanum wheel has rollers at 45&deg; to its axis, so it pushes the robot both along its direction of travel and sideways at the same time. Changing the direction of each wheel lets the robot drive forward, slide sideways, move diagonally or spin on the spot.</p>
+								<span class="image fit"><img src="images/warman/mecanum-patterns.jpg" alt="Movement patterns for a robot with four mecanum wheels" /></span>
+								<span class="caption">How wheel directions combine into forward, sideways, diagonal and rotational motion.</span>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Movement</th><th>Front left</th><th>Front right</th><th>Rear left</th><th>Rear right</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Forward</td><td>&uarr;</td><td>&uarr;</td><td>&uarr;</td><td>&uarr;</td></tr>
+											<tr><td>Reverse</td><td>&darr;</td><td>&darr;</td><td>&darr;</td><td>&darr;</td></tr>
+											<tr><td>Slide right</td><td>&uarr;</td><td>&darr;</td><td>&darr;</td><td>&uarr;</td></tr>
+											<tr><td>Slide left</td><td>&darr;</td><td>&uarr;</td><td>&uarr;</td><td>&darr;</td></tr>
+											<tr><td>Rotate clockwise</td><td>&uarr;</td><td>&uarr;</td><td>&darr;</td><td>&darr;</td></tr>
+											<tr><td>Rotate anticlockwise</td><td>&darr;</td><td>&darr;</td><td>&uarr;</td><td>&uarr;</td></tr>
+										</tbody>
+									</table>
+								</div>
+
+								<h3>Hardware</h3>
+								<span class="image fit"><img src="images/warman/electronics.jpg" alt="TT DC motor, Makerverse motor driver, Arduino Mega and DC-DC buck converter" /></span>
+								<span class="caption">Left to right: TT DC motor, Makerverse motor driver, Arduino Mega and DC-DC buck converter.</span>
+								<ul>
+									<li><strong>Motors.</strong> Four Arduino TT DC motors driving 80&nbsp;mm mecanum wheels. They cover the torque requirement, run at 120&ndash;300&nbsp;RPM and draw 3&ndash;5&nbsp;W, enough for the target speed of 1&nbsp;m/s.</li>
+									<li><strong>Motor drivers.</strong> Two Makerverse drivers, each running two motors. They accept 3&ndash;16&nbsp;V and handle 1.6&nbsp;A continuously, comfortably above the motor&rsquo;s 1&nbsp;A stall current at 6&nbsp;V. They also have adjustable current limiting, reverse-polarity protection and thermal overload protection.</li>
+									<li><strong>Power.</strong> A 9&nbsp;V battery feeds a main switch and then a buck converter that steps it down to 6&nbsp;V. The Arduino Mega and both drivers are wired in parallel from that 6&nbsp;V rail.</li>
+									<li><strong>Torque check.</strong> With 5.5&nbsp;kg spread across four driven 40&nbsp;mm-radius wheels, each wheel needs about 0.027&nbsp;N&middot;m.</li>
+								</ul>
+								<span class="image fit"><img src="images/warman/mecanum-circuit.jpg" alt="Block circuit diagram for the mecanum wheel control system" /></span>
+								<span class="caption">Block circuit diagram: battery, switch, buck converter, Arduino Mega, two motor drivers and four motors.</span>
+
+								<h3>Control software</h3>
+								<p>The Arduino sends each motor a PWM signal for speed and a direction signal. A single <code>controlMotor(directionPin, pwmPin, forward, speed)</code> function handles one wheel, and the movement commands build on it: forward, backward, strafe left, strafe right and stop. The robot can be driven over serial with the single-character commands <code>F</code>, <code>B</code>, <code>L</code>, <code>R</code> and <code>S</code>.</p>
+								<p>To test the drive base, I wrote an automated routine. It drives forward, backward, strafes left and strafes right for two seconds each, stops for half a second between moves, and repeats the sequence until 30 seconds have passed.</p>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/mecanum-flowchart.jpg" alt="Flowchart of the mecanum wheel test routine" /></span>
+										<span class="caption">Test routine flowchart.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/warman/mecanum-test.jpg" alt="Mecanum wheel test rig with Arduino and motor drivers" /></span>
+										<span class="caption">The mecanum test rig, powered up.</span>
+									</div>
+								</div>
+
+								<h2>Results</h2>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Run</th><th>Time (s)</th><th>Score</th><th>Comments</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>1</td><td>26</td><td>47</td><td>Robot started</td></tr>
+											<tr><td>2</td><td>16</td><td>52</td><td>Robot started and knocked over a ball</td></tr>
+										</tbody>
+										<tfoot>
+											<tr><td>Total</td><td>42</td><td>99</td><td></td></tr>
+										</tfoot>
+									</table>
+								</div>
+								<p>On competition day the robot started both runs but didn&rsquo;t collect balls as planned. Looking back, a chain of hardware and software problems caused it:</p>
+								<ul>
+									<li><strong>Linear actuator burnout.</strong> The linear actuators burned out just before testing, so we had to start the robot from the side of the course instead of the centre. That changed every arm angle the code relied on and made the arm much less accurate.</li>
+									<li><strong>Gearbox detachment.</strong> The arm gearbox came loose from the chassis during a run, which hurt mobility and stopped the robot collecting more balls.</li>
+									<li><strong>Microcontroller issues.</strong> We had trouble uploading sketches to the Arduino Mega.</li>
+									<li><strong>Code that couldn&rsquo;t adapt.</strong> With little time and limited programming experience in the team, we couldn&rsquo;t fully rework the control code for the new start position. The robot under-turned on the first run and over-turned on the second. With no error handling, it couldn&rsquo;t compensate for the changed setup.</li>
+								</ul>
+
+								<h2>What I Learned</h2>
+								<p>This project took me through the whole mechanical design process: concept selection with morphological tables and weighted scoring, CAD and engineering drawings in SolidWorks, rapid prototyping with laser cutting and 3D printing, hand calculations, and testing against requirements.</p>
+								<p>The competition result taught me the most. The chassis met every requirement I tested it against, but the robot as a whole still underperformed. A good mechanical design isn&rsquo;t enough without reliable parts, robust code and time left for integration testing. On my next project I would:</p>
+								<ul>
+									<li>Choose more durable actuators and test them under load much earlier.</li>
+									<li>Write control code that can handle a changed starting position or a mechanical fault.</li>
+									<li>Build up the team&rsquo;s programming skills earlier in the project.</li>
+									<li>Plan for problems by leaving real slack in the schedule for integration and testing.</li>
+								</ul>
+								<p>Leading a team that lost half its members partway through was the hardest part of the project, and the part I learned the most from.</p>
+
+								<h2>Testing Videos</h2>
+								<ul>
+									<li><a href="https://youtube.com/shorts/JnDLkL5Ebw4" target="_blank">Forward/backward movement without powered wheels</a></li>
+									<li><a href="https://youtube.com/shorts/nZRegpEZXqI" target="_blank">Chassis motor testing with powered wheels</a></li>
+									<li><a href="https://youtu.be/MKoDO47W65I" target="_blank">Chassis driving on the Warman track</a></li>
+									<li><a href="https://youtube.com/shorts/-gNgSTkjGH8" target="_blank">Mecanum wheels driving on MDF</a></li>
+								</ul>
+
+								<ul class="actions special">
+									<li><a href="index.html" class="button">Back to Projects</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:madhavdiwan7@gmail.com">madhavdiwan7@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>LinkedIn</h3>
+								<p><a href="https://www.linkedin.com/in/madhav-diwan-3a1b08146/">Madhav Diwan</a></p>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Madhav Diwan</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	<script src="assets/js/robot-viewer.js"></script></body>
+</html>
+
+
+

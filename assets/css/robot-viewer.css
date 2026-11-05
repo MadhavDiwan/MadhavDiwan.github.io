@@ -1,0 +1,6 @@
+.robot-viewer { margin: 3rem 0; padding: 1.5rem; border: 2px solid #e2e2e2; border-radius: .5rem; }
+.robot-viewer model-viewer { display: block; width: 100%; height: clamp(300px, 60vh, 620px); background: #eef1f4; border-radius: .35rem; }
+.robot-viewer .robot-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.25rem; }
+.robot-viewer button[hidden] { display: none; }
+.robot-viewer p { margin: 1rem 0; }
+.robot-viewer button:focus-visible { outline: 3px solid #176b70; outline-offset: 4px; }

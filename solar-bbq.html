@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Solar BBQ - Madhav's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.caption { display: block; margin: -1.25rem 0 2rem 0; font-size: 0.8rem; font-style: italic; color: #888; text-align: center; }
+		</style>
+	<link rel="stylesheet" href="assets/css/robot-viewer.css" />
+		<link rel="stylesheet" href="assets/css/engineering.css" /></head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">&larr; All Projects</a></li>
+							<li class="active"><a href="solar-bbq.html">Solar BBQ</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">Autumn 2025</span>
+									<h1>Solar<br />
+									BBQ</h1>
+									<p>A compact, portable barbecue that cooks sausages using only sunlight,<br />
+									taken from stakeholder interviews through to a tested aluminium and copper prototype.<br />
+									41067 Mechanical Systems Design Studio 2, UTS.</p>
+								</header>
+								<section class="case-summary" aria-label="Project at a glance">
+	<div class="case-summary-text">
+		<dl>
+			<dt>Challenge</dt><dd>Design a portable barbecue that cooks with sunlight alone.</dd>
+			<dt>My contribution</dt><dd>Owned several design requirements, helped fabricate the prototype and ran the weight and edge-safety tests.</dd>
+			<dt>Result</dt><dd>The team built and tested a prototype with twin curved reflectors and a metal cooking plate.</dd>
+		</dl>
+		<p><a href="#solar-cad-heading">Explore the 3D assembly &rarr;</a></p>
+	</div>
+	<div class="case-summary-media"><div class="image main"><img src="images/solar-bbq/final-prototype.jpg" alt="Final solar BBQ prototype with both curved reflectors open and the carry strap attached" /></div>
+								<span class="caption">The finished prototype: two curved mirror reflectors either side of a black copper-backed cooking chamber.</span></div>
+</section>
+
+								<h2>Overview</h2>
+								<p>Our team of four was briefed to design and build a solar-powered barbecue for young adults and couples: people who want a portable BBQ for the beach, camping or a small apartment balcony at a reasonable price. It had to cook six sausages using sunlight alone, carry easily in one hand, and fit inside a 500&nbsp;&times;&nbsp;335&nbsp;&times;&nbsp;295&nbsp;mm storage tub. It also had to keep users safe from burns, sharp edges and glare reflected into their eyes.</p>
+								<p>We followed the <strong>ADAP&sup3;D</strong> design process: strategic planning, requirements analysis, problem structuring, idea generation, solution assessment, selection, and risk mitigation. The project ran from February to June 2025 in five components, each building on the last:</p>
+								<ol>
+									<li><strong>Research.</strong> Team contract, stakeholder analysis, requirements, QFD and competitor analysis.</li>
+									<li><strong>Ideation.</strong> Function analysis, morphological tables, TRIZ, concept scoring and system architecture.</li>
+									<li><strong>Risk.</strong> Root cause analysis, FMEA and an implementation plan for the mitigations.</li>
+									<li><strong>Build.</strong> Construction, testing and a live demonstration.</li>
+									<li><strong>Documentation.</strong> Final drawings and the full design portfolio.</li>
+								</ol>
+								<span class="image fit"><img src="images/solar-bbq/gantt.jpg" alt="Gantt chart of the project across five components from February to June 2025" /></span>
+								<span class="caption">The original project plan. It was reworked later to fit in the concept redesign described below.</span>
+
+								<h2>My Role</h2>
+								<p>I worked on the project with Daniel Bell, Samuel Harris and Charles Orprecio. Each of us led some areas and reviewed the others&rsquo; work. My contributions were:</p>
+								<ul>
+									<li><strong>Requirements.</strong> I wrote and owned the requirements for fitting in the storage tub, maximum weight, edge safety, glare and UV exposure, food-safe cooking materials, and the &le;&nbsp;$270 manufacturing cost target that came from the CFO&rsquo;s pricing brief.</li>
+									<li><strong>Build.</strong> I helped source materials and fabricate the prototype in the workshop.</li>
+									<li><strong>Review.</strong> I reviewed the CAD modelling, technical drawings, prototype development and test plan.</li>
+									<li><strong>Testing.</strong> I ran the weight test and the edge-safety (deburring) inspection.</li>
+								</ul>
+
+								<h2>Research</h2>
+								<h3>Stakeholders</h3>
+								<p>First we worked out who actually had a stake in the product. From a long list of possible stakeholder classes, the relevant ones were internal teams (manufacturing, OHS, quality, R&amp;D, purchasing, management and the customer department), plus three external groups: customers, competitors and suppliers. A process map showed which of them mattered at each phase, from research through ideation, screening, prototyping and testing to production.</p>
+								<span class="image fit"><img src="images/solar-bbq/stakeholder-map.jpg" alt="Process-oriented stakeholder map linking stakeholders to design phases" /></span>
+								<span class="caption">Process-oriented stakeholder analysis: who influences each phase of development.</span>
+								<p>We then scored each of the roughly 30 interviewees from 1 to 5 on <strong>power</strong>, <strong>interest</strong> and <strong>legitimacy</strong>. The highest-priority stakeholders were the senior manufacturing engineer (15/15), the CFO (13), the senior OHS manager (13) and the sales and market research lead (12). Potential users in our target market scored around 10, and people well outside it scored below 5 and weren&rsquo;t treated as stakeholders.</p>
+
+								<h3>Requirements</h3>
+								<p>Next we turned the interview statements into requirements. Some came out directly as numbers. &ldquo;No larger than a case of beer, no heavier than two cases&rdquo; became a size and weight limit. &ldquo;Setup should take three minutes or less&rdquo; became a timed requirement. Others were qualitative needs, such as &ldquo;nobody ends up with a fried hand from touching the chassis&rdquo; or &ldquo;the BBQ shouldn&rsquo;t direct blinding rays into people&rsquo;s faces&rdquo;. We put those through a QFD matrix to give them measurable targets. The final requirements list gave every requirement an owner, a target value and a test method:</p>
+								<ul>
+									<li>Manufacturing cost &le;&nbsp;$270 per unit, for a 10% margin at a $250&ndash;300 retail price.</li>
+									<li>A maximum weight of 5&nbsp;kg and an extended width of 60&nbsp;&plusmn;&nbsp;4&nbsp;cm.</li>
+									<li>Must fit inside the 500&nbsp;&times;&nbsp;335&nbsp;&times;&nbsp;295&nbsp;mm storage tub.</li>
+									<li>Full setup in under 5 minutes, with a one-handed carry handle.</li>
+									<li>Any surface that isn&rsquo;t for cooking stays below 40&nbsp;&deg;C, and every edge is deburred with no sharp corners.</li>
+									<li>Stays stable on a 15&deg; slope and survives a 500&nbsp;mm drop.</li>
+									<li>Cooks a sausage in under 20 minutes in full sun, using only food-safe, non-glass materials.</li>
+								</ul>
+
+								<h3>Competitor analysis</h3>
+								<p>We compared seven commercial solar cookers against our targets:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Product</th><th>Type</th><th>Weight</th><th>Temperature</th><th>Price (AUD)</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>GoSun Fusion</td><td>Tube</td><td>6.8&nbsp;kg</td><td>Up to 288&nbsp;&deg;C</td><td>$643</td></tr>
+											<tr><td>GoSun Go</td><td>Tube</td><td>0.9&nbsp;kg</td><td>~200&nbsp;&deg;C</td><td>$192</td></tr>
+											<tr><td>Energy Wise Premium</td><td>Folding oven</td><td>4.5&nbsp;kg</td><td>~250&nbsp;&deg;C</td><td>$138</td></tr>
+											<tr><td>WENSHENG Solar Oven</td><td>Folding tube</td><td>2&nbsp;kg</td><td>120&ndash;330&nbsp;&deg;C</td><td>$138</td></tr>
+											<tr><td>Hoiaost 1.5&nbsp;m</td><td>Parabolic dish</td><td>15&nbsp;kg</td><td>~330&nbsp;&deg;C</td><td>$467</td></tr>
+											<tr><td>SunGlobe Pack+</td><td>Folding parabolic</td><td>15&nbsp;kg</td><td>200&ndash;240&nbsp;&deg;C</td><td>$806</td></tr>
+											<tr><td>SolSource Classic</td><td>Parabolic dish</td><td>18&nbsp;kg</td><td>~1000&nbsp;W output</td><td>$806</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>Large parabolic dishes reach high temperatures, but at 15&ndash;18&nbsp;kg and up to 1.5&nbsp;m across they&rsquo;re nowhere near portable. Compact tube and folding designs hit our weight and price targets but have limited cooking space. That told us where to aim: something as portable as a tube cooker, with room for six sausages.</p>
+
+								<h2>Concept Development</h2>
+								<h3>Function analysis</h3>
+								<p>A relation-oriented function analysis broke the core task into a chain: <em>capture solar energy &rarr; focus it &rarr; convert it to heat &rarr; distribute heat across the cooking area &rarr; heat the food</em>. It also mapped the harmful side effects each step could cause: limited mobility from large collectors, burn risk, the need for cooling, uneven heating, heat loss, material damage and smoke. We rewrote each conflict as a problem statement, for example &ldquo;how could we generate heat without risking user burns?&rdquo;, and used those statements to drive the next round of ideas.</p>
+								<span class="image fit"><img src="images/solar-bbq/function-analysis.jpg" alt="Relation-oriented function analysis showing useful and harmful functions" /></span>
+								<span class="caption">Relation-oriented function analysis. Useful functions are in white and harmful side effects in red.</span>
+
+								<h3>Generating and filtering ideas</h3>
+								<p>We generated partial solutions for each subfunction (focus energy, collect heat, retain heat, stabilise, adjust, carry, store and shield the user) in a morphological table. The options came from competitor products, our own brainstorming and <strong>TRIZ</strong> inventive principles such as segmentation, nesting and flexible shells. Knock-out criteria removed options that couldn&rsquo;t do their job. Systematic variation then improved promising ideas that were held back by one flaw. For example, we broke a single large Scheffler reflector into foldable petals to make it portable.</p>
+								<span class="image fit"><img src="images/solar-bbq/morph-table.jpg" alt="Final morphological table with sketches of each partial solution" /></span>
+								<span class="caption">Final morphological table, with a sketch of each partial solution.</span>
+
+								<h3>Six concepts</h3>
+								<p>We combined one option from each row into six full concepts:</p>
+								<div class="row">
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/concept-1.jpg" alt="Sketch of concept 1, a tube with four hinged reflector panels on a tripod" /></span>
+										<span class="caption">Concept 1: a collapsible tube with four hinged mirror panels on a swivelling tripod.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/concept-4.jpg" alt="Sketch of concept 4, parabolic mirrors heating a conductive element inside an insulated tube" /></span>
+										<span class="caption">Concept 4: parabolic mirrors heating a conductor that runs into an insulated tube.</span>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/concept-5.jpg" alt="Sketch of concept 5, a radial fold-out aperture-style reflector" /></span>
+										<span class="caption">Concept 5: a radial fold-out reflector that opens like a camera aperture.</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/concept-6-cad.jpg" alt="CAD model of concept 6 with two folding curved reflectors either side of an enclosed cooking chamber" /></span>
+										<span class="caption">Concept 6, the winning design.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<p><strong>Concept 6</strong> has two folding curved reflectors either side of a compact, enclosed &ldquo;oven-like&rdquo; cooking chamber on rubberised feet. The reflectors are sized at about 1.68 times the cooking surface area so enough energy reaches the food. The cooking surfaces are aluminium on the food side and black-painted copper on the side facing the light, to absorb and hold heat. Folded, it&rsquo;s compact enough to carry in one hand.</p>
+									</div>
+								</div>
+								<p>We ranked the concepts with a qualitative pros and cons list, then pairwise comparisons on weight, size, safety, stability, assembly time, transport, cost and durability. Those scores fed a weighted scoring matrix:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th></th><th>Sol. 1</th><th>Sol. 2</th><th>Sol. 3</th><th>Sol. 4</th><th>Sol. 5</th><th>Sol. 6</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Weighted score</td><td>85</td><td>103</td><td>98</td><td>100</td><td>50</td><td><strong>124</strong></td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>In an earlier iteration, before Concept 6 existed, the tube-based Concept 4 came out on top. Once we added Concept 6 and revisited the scores, it won clearly, ranking first for size, weight, stability, assembly time, transport and durability.</p>
+
+								<h3>System architecture</h3>
+								<p>A hierarchical function model put <em>cook food</em> at the top, split into its two main branches, <em>heat food</em> and <em>transport BBQ</em>. Each branch broke down into subfunctions such as directing light, storing heat, gathering smoke, carrying and stabilising. The system architecture then mapped every subfunction to a physical component, grouped into four modules: the structural frame and supports, the heating elements and cooking area, heat insulation and retention, and the solar collection and redirection system.</p>
+								<span class="image fit"><img src="images/solar-bbq/hierarchy.jpg" alt="Hierarchical function model from cook food down to individual subfunctions" /></span>
+								<span class="caption">Hierarchical function model.</span>
+								<span class="image fit"><img src="images/solar-bbq/system-architecture.jpg" alt="System architecture linking functions to components and modules" /></span>
+								<span class="caption">System architecture: functions on the left mapped to components and modules on the right.</span>
+
+								<h3>A late redesign</h3>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/original-concept.jpg" alt="Sketch of the original concept using a conductive element to carry heat to a central chamber" /></span>
+										<span class="caption">Before: heat carried along a conductive element.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/redesign-cad.jpg" alt="CAD model of the redesigned BBQ with reflectors focusing directly on the cooking surfaces" /></span>
+										<span class="caption">After: reflectors focus directly on the cooking surfaces.</span>
+									</div>
+								</div>
+								<p>Our first chosen concept used a conductive element to carry heat from the reflectors&rsquo; focal points into a central cooking chamber. After a design emergency simulation, we and our tutors realised the heat wouldn&rsquo;t travel evenly along a long conductor. The outer ends would get hot while the centre stayed cool, which would mean slow and inconsistent cooking.</p>
+								<p>We dropped the conductive transfer idea entirely and reconfigured the design so the reflectors focus sunlight <strong>directly onto the cooking surfaces</strong>, with the food held between them. That cut thermal losses and simplified the architecture, but it set off a chain of changes:</p>
+								<ul>
+									<li><strong>Materials.</strong> The priority moved from high conductivity to strong heat absorption and retention, so we chose blackened copper.</li>
+									<li><strong>Structure.</strong> The chamber was reshaped and the food reoriented so it sits between the heated surfaces.</li>
+									<li><strong>Safety.</strong> Heated surfaces that are more exposed raised new burn risks, which needed guarding and clear handling areas.</li>
+									<li><strong>Risk and testing.</strong> The FMEA and the test plan were revised. Some failure modes became obsolete, and new ones such as surface warping appeared.</li>
+								</ul>
+								<p>Because the change came late, we had to rework the documentation in parallel and compress the build schedule. It cost us time, but the final product was simpler and worked better.</p>
+
+								<h2>Risk Analysis</h2>
+								<p>We analysed risk at three levels. <strong>Failure cause-and-effect chains</strong> traced how each module could fail: smoke reaching the user, heat escaping to handled parts, uneven heating, grease leaking and frame collapse. Each chain identified how to prevent the failure and how to detect it. <strong>Root cause analysis</strong> went further down each failure to its underlying causes. For example, &ldquo;distributes heat unevenly&rdquo; traced back to material selection, gaps in the chamber, misaligned reflectors or flat geometry. A <strong>FMEA</strong> then scored each failure mode for severity, probability and detectability to prioritise mitigations.</p>
+								<span class="image fit"><img src="images/solar-bbq/root-cause.jpg" alt="Root cause analysis trees for uneven heating and structural failure" /></span>
+								<span class="caption">Root cause analysis for uneven heating and structural failure.</span>
+								<p>We implemented four of the five main mitigations in the final design:</p>
+								<ul>
+									<li>A deeper reflector curve to control where the light goes.</li>
+									<li>Only two moving parts, the reflectors on torque hinges, to cut down on loose or failing components.</li>
+									<li>A large removable lid that also helps ventilation.</li>
+									<li>Heat-sensitive parts, such as the 3D-printed legs, placed away from the hot surfaces.</li>
+								</ul>
+								<p>We deliberately left out adjustable height. Its risk priority was low, and a fixed low stance made the BBQ more stable and safer. We also wrote a workshop risk assessment for every tool we used. The cold saw ranked highest (RPN 216) because of kickback, so we used clamps and blade guards with it.</p>
+
+								<h2>Final Design and Manufacture</h2>
+								<section class="robot-viewer" aria-labelledby="solar-cad-heading">
+									<h3 id="solar-cad-heading">Explore the Solar BBQ in 3D</h3>
+									<p>Inspect the full assembly from different angles.</p>
+									<model-viewer id="robot-model" alt="Full CAD assembly of the Solar BBQ" camera-controls touch-action="pan-y" camera-orbit="0deg 75deg 105%" shadow-intensity="1" interaction-prompt="none"></model-viewer>
+									<div class="robot-controls">
+										<button type="button" id="load-robot">Load 3D model (26 MB)</button>
+										<button type="button" id="reset-robot" disabled>Reset view</button>
+										<a href="assets/models/solar-bbq.glb" download>Download GLB</a>
+									</div>
+									<p id="robot-status" role="status" aria-live="polite">Load the model to rotate and zoom.</p>
+									<noscript><p>Enable JavaScript to use the viewer, or download the GLB above.</p></noscript>
+								</section>
+								<p>The final prototype has 13 parts and took about 20 labour hours to build:</p>
+								<ul>
+									<li><strong>Frame.</strong> 1&nbsp;mm aluminium sheet, cut on a manual guillotine, marked out with a scribe for drilling and bending, and folded on a manual press brake. The folded edge pieces trap heat inside the cooking area and give the carry strap something to attach to.</li>
+									<li><strong>Cooking plates.</strong> Aluminium riveted to 0.7&nbsp;mm copper backing of the same size and spray-painted black. The copper adds thermal mass so the sausages keep cooking through short cloudy periods.</li>
+									<li><strong>Reflectors.</strong> Aluminium sheet rolled on a sheet-metal roller to the calculated optimal curve, checked against a 3D-printed arc gauge. We glued mirror paper to the curved surface instead of polishing the metal by hand: it was more efficient than polishing, and the sheets can be replaced when they wear. Resistive torque hinges hold each reflector at any angle.</li>
+									<li><strong>Legs.</strong> Small 3D-printed PLA legs, bolted to the copper plate outside the path of the reflected light. They keep the centre of gravity low and the BBQ compact.</li>
+									<li><strong>Handling.</strong> A riveted fabric strap for one-handed carrying, and a removable cover for access to the cooking surfaces.</li>
+								</ul>
+								<span class="image fit"><img src="images/solar-bbq/exploded-view.jpg" alt="Exploded-view assembly drawing of the solar BBQ with bill of materials" /></span>
+								<span class="caption">Exploded-view assembly drawing and bill of materials.</span>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/reflector-drawing.jpg" alt="Technical drawing of the curved reflector, 250 mm wide with a 40 mm sag" /></span>
+										<span class="caption">Reflector: 250&nbsp;mm chord with a 40&nbsp;mm depth of curve.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/leg-drawing.jpg" alt="Technical drawing of the 3D-printed BBQ leg" /></span>
+										<span class="caption">3D-printed PLA leg.</span>
+									</div>
+								</div>
+
+								<h3>Sizing the reflectors</h3>
+								<p>To check that the concept could work, we estimated the energy needed to bring six sausages (500&nbsp;g, specific heat 2.34&nbsp;kJ/kg&middot;&deg;C) up by 70&nbsp;&deg;C to the food-safe internal temperature of 71&nbsp;&deg;C:</p>
+								<p style="text-align:center"><em>Q = mc&Delta;T = 0.5 &times; 2340 &times; 70 &asymp; 81.9&nbsp;kJ</em></p>
+								<p>At midday in Sydney in early April, sunlight is about 750&nbsp;W/m&sup2;. One square metre of collected sunlight would deliver that energy in about 110 seconds if nothing were lost. The real cook takes much longer because of reflection, convection and conduction losses. The calculation showed the concept was feasible and guided how large we made the reflectors.</p>
+
+								<h3>Cost</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Item</th><th>Supplier</th><th>Cost (AUD)</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>1&nbsp;mm aluminium sheet (frame, heating element, reflectors)</td><td>UTS</td><td>$240.60</td></tr>
+											<tr><td>0.7&nbsp;mm copper sheet</td><td>Williamstown Metals</td><td>$64.00</td></tr>
+											<tr><td>3D-printed PLA legs</td><td>Local print service</td><td>$20.00</td></tr>
+											<tr><td>Torque hinges (&times;2)</td><td>I.R.S.</td><td>$16.88</td></tr>
+											<tr><td>Mirror paper, rivets, bolts and strap</td><td>Various</td><td>$8.10</td></tr>
+											<tr><td>Labour (20&nbsp;h at $100/h)</td><td>&mdash;</td><td>$2,000.00</td></tr>
+										</tbody>
+										<tfoot>
+											<tr><td>Total</td><td></td><td>$2,349.58</td></tr>
+										</tfoot>
+									</table>
+								</div>
+								<p>Materials came to only about $350. Most of the cost was labour, and that was high because the team was new to sheet-metal fabrication. An experienced fabricator could build the same unit for around $850, and batch production with automated processes would bring the unit cost down much further, towards our manufacturing target.</p>
+
+								<h2>Testing</h2>
+								<p>We linked every testable requirement to a test protocol, with a named tester, a pass condition and what an unsuccessful result would mean for the product.</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr><th>Requirement</th><th>Test</th><th>Result</th></tr>
+										</thead>
+										<tbody>
+											<tr><td>Folded size and fits in the storage tub</td><td>Tape measure</td><td>Passed</td></tr>
+											<tr><td>Extended width 60 &plusmn; 4&nbsp;cm</td><td>Tape measure</td><td>Passed</td></tr>
+											<tr><td>Weight under 5&nbsp;kg</td><td>Scale</td><td>Passed</td></tr>
+											<tr><td>Stable on a 15&deg; slope</td><td>Tilted surface and push test</td><td>Passed</td></tr>
+											<tr><td>Non-cooking surfaces stay below 40&nbsp;&deg;C</td><td>Infrared thermometer after heating the plate to 70&nbsp;&deg;C</td><td>Passed</td></tr>
+											<tr><td>Edges deburred, no sharp corners</td><td>Square, before and after deburring</td><td>Passed</td></tr>
+											<tr><td>Set up in under 5 minutes</td><td>Stopwatch</td><td>Passed</td></tr>
+											<tr><td>Survives a 500&nbsp;mm drop</td><td>Drop test</td><td>Passed, minimal damage</td></tr>
+											<tr><td>Cooking surface holds within 15&nbsp;&deg;C for 10 minutes in shade</td><td>Heat, move to shade, measure</td><td><strong>Failed:</strong> dropped 32&nbsp;&deg;C in 6 minutes</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/size-test.jpg" alt="Measuring the folded height of the BBQ with a tape measure" /></span>
+										<span class="caption">Measuring the folded dimensions.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/width-test.jpg" alt="Measuring the extended width of the BBQ with reflectors open" /></span>
+										<span class="caption">Extended width with the reflectors open.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/weight-test.jpg" alt="BBQ being weighed on a digital scale" /></span>
+										<span class="caption">Weight test: under 5&nbsp;kg.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/stability-test.jpg" alt="BBQ on a tilted surface for the stability test" /></span>
+										<span class="caption">Stability on a 15&deg; slope.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/heat-test.jpg" alt="Measuring surface temperatures with an infrared thermometer" /></span>
+										<span class="caption">Surface temperature checks.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/setup-test.jpg" alt="Timing the BBQ setup with a stopwatch" /></span>
+										<span class="caption">Timed setup: under 5 minutes.</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-3 col-6-small">
+										<span class="image fit"><img src="images/solar-bbq/edge-before.jpg" alt="Reflector edge before deburring" /></span>
+										<span class="caption">Edge before deburring.</span>
+									</div>
+									<div class="col-3 col-6-small">
+										<span class="image fit"><img src="images/solar-bbq/edge-after.jpg" alt="Reflector edge after deburring" /></span>
+										<span class="caption">After deburring.</span>
+									</div>
+									<div class="col-6 col-12-small">
+										<span class="image fit"><img src="images/solar-bbq/drop-test.jpg" alt="BBQ after the 500 mm drop test" /></span>
+										<span class="caption">After the 500&nbsp;mm drop test.</span>
+									</div>
+								</div>
+								<p>The failed heat-retention test showed that the copper backing alone can&rsquo;t keep the plate hot through a long cloudy spell. As built, the BBQ works best on days when cloud cover lasts no more than about five minutes at a time. Insulating the chamber walls or adding thermal mass would be the obvious next step. The full-sun cooking requirements (cooking a sausage in under 20 minutes, reaching 80&nbsp;&deg;C within 5 minutes, and peak temperature) were left to be confirmed in outdoor testing on demonstration day.</p>
+
+								<h2>What I Learned</h2>
+								<ul>
+									<li><strong>Structured design methods.</strong> I used stakeholder prioritisation, QFD, morphological tables, TRIZ, pairwise and weighted scoring, system architecture, FMEA and root cause analysis on a real product. Each tool&rsquo;s output fed directly into the next, which made our decisions traceable and easy to defend.</li>
+									<li><strong>Changing direction.</strong> The late redesign was painful for the schedule, but dropping a concept that wouldn&rsquo;t heat evenly was the right call. I learned to keep documentation flexible enough to change quickly, and to raise feasibility doubts early.</li>
+									<li><strong>Sheet-metal fabrication.</strong> I got hands-on with the guillotine, press brake, sheet roller, riveting and 3D printing. I also saw how much fabrication experience, or the lack of it, drives labour cost.</li>
+									<li><strong>Honest testing.</strong> Linking every requirement to a test made it clear what we had actually achieved and what we hadn&rsquo;t. The failed heat-retention result points to a clear improvement for the next version.</li>
+								</ul>
+
+								<ul class="actions special">
+									<li><a href="index.html" class="button">Back to Projects</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:madhavdiwan7@gmail.com">madhavdiwan7@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>LinkedIn</h3>
+								<p><a href="https://www.linkedin.com/in/madhav-diwan-3a1b08146/">Madhav Diwan</a></p>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Madhav Diwan</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	<script src="assets/js/robot-viewer.js"></script>
+	</body>
+</html>
+

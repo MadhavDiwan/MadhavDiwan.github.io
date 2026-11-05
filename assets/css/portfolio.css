@@ -1,0 +1,27 @@
+.portfolio-home [hidden] { display: none; }
+.home-nav, .home-content, .home-contact { width: min(72rem, calc(100% - 3rem)); margin-inline: auto; }
+.home-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+.home-nav a, .home-contact a, .home-feature a { color: var(--accent); }
+.home-nav nav, .home-contact p { display: flex; flex-wrap: wrap; gap: 1rem; }
+.home-name { font-weight: 700; }
+.home-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(1.5rem, 5vw, 4rem); padding: clamp(2rem, 5vw, 4.5rem) 0; }
+.home-hero h1 { font-size: clamp(2.6rem, 6vw, 5rem); margin: 0 0 1rem; }
+.home-hero p, .home-projects p { margin-bottom: .8rem; }
+.home-feature, .home-projects article, .project-tools { background: var(--paper); border: 1px solid var(--line); border-radius: .5rem; overflow: hidden; }
+.home-feature > div, .home-projects article > div, .project-tools { padding: 1.25rem; }
+.home-feature img, .home-projects img { display: block; width: 100%; object-fit: cover; }
+.home-feature img { aspect-ratio: 2 / 1; }
+.home-projects img { aspect-ratio: 16 / 10; }
+.home-feature h2, .home-projects h3 { margin-bottom: .5rem; }
+.home-projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.project-filters { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+.project-filters button { padding-inline: 1rem; }
+.project-filters button[aria-pressed="true"] { background: var(--accent); color: #fff !important; box-shadow: none; }
+#project-count { margin: .75rem 0 0; font-size: .9rem; }
+.home-contact { margin-block: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.portfolio-home :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 900px) { .home-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+	.home-nav, .home-content, .home-contact { width: calc(100% - 2rem); }
+	.home-hero, .home-projects { grid-template-columns: 1fr; }
+}

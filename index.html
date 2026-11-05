@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Three.js Demo</title>
-  <style>
-    body { margin: 0; overflow: hidden; }
-    canvas { display: block; }
-  </style>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Madhav Diwan | Engineering Portfolio</title>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/engineering.css" />
+	<link rel="stylesheet" href="assets/css/portfolio.css" />
+	<script src="assets/js/portfolio.js" defer></script>
 </head>
-<body>
-  <script type="module">
-    import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+<body class="portfolio-home">
+	<header class="home-nav">
+		<a href="index.html" class="home-name">Madhav Diwan</a>
+		<nav aria-label="Main navigation">
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</header>
+	<main class="home-content">
+		<section class="home-hero" aria-labelledby="home-heading">
+			<div>
+				<p class="project-label">Engineering portfolio</p>
+				<h1 id="home-heading">Ideas into working systems.</h1>
+				<p>I design, build and test projects in mechanical design, robotics, electronics and computer vision.</p>
+				<a class="button" href="#projects">Browse projects</a>
+			</div>
+			<article class="home-feature">
+				<a href="warman.html" tabindex="-1" aria-hidden="true"><img src="images/warman/final-robot.jpg" alt="" /></a>
+				<div>
+					<p class="project-label">Featured / Robotics and CAD</p>
+					<h2><a href="warman.html">Warman competition robot</a></h2>
+					<p>I led the team, designed the chassis, built the SolidWorks assembly and wrote the Arduino control code.</p>
+					<a href="warman.html#robot-heading">Explore the 3D assembly &rarr;</a>
+				</div>
+			</article>
+		</section>
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(10, 10, 10);
-    scene.add(light);
-
-    camera.position.z = 5;
-
-    function animate() {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-
-    animate();
-  </script>
+		<section id="projects" aria-labelledby="projects-heading">
+			<h2 id="projects-heading">Selected projects</h2>
+			<div class="project-tools" hidden>
+				<label for="project-search">Search projects</label>
+				<input id="project-search" type="search" placeholder="Try Arduino or solar" />
+				<div class="project-filters" role="group" aria-label="Project category"></div>
+				<p id="project-count" role="status"></p>
+			</div>
+			<div class="home-projects">
+				<article data-category="Robotics">
+					<a href="warman.html" tabindex="-1" aria-hidden="true"><img src="images/mdfs.jpg" alt="" loading="lazy" /></a>
+					<div><p class="project-label">Robotics and CAD</p><h3><a href="warman.html">Warman competition robot</a></h3>
+					<p>An autonomous robot designed to collect six seed pods from a competition track.</p></div>
+				</article>
+				<article data-category="Mechanical">
+					<a href="solar-bbq.html" tabindex="-1" aria-hidden="true"><img src="images/solarbbq.jpg" alt="" loading="lazy" /></a>
+					<div><p class="project-label">Mechanical design</p><h3><a href="solar-bbq.html">Solar BBQ</a></h3>
+					<p>A portable prototype that focuses sunlight onto a metal cooking plate.</p></div>
+				</article>
+				<article data-category="Electronics">
+					<a href="step-tracker.html" tabindex="-1" aria-hidden="true"><img src="images/step_tracker.jpg" alt="" loading="lazy" /></a>
+					<div><p class="project-label">Electronics and embedded systems</p><h3><a href="step-tracker.html">Step Tracker</a></h3>
+					<p>A handheld step counter with a custom Arduino shield and accelerometer.</p></div>
+				</article>
+				<article data-category="Computer Vision">
+					<a href="weed-detection.html" tabindex="-1" aria-hidden="true"><img src="images/weed_detection.jpg" alt="" loading="lazy" /></a>
+					<div><p class="project-label">Computer vision</p><h3><a href="weed-detection.html">Weed Detection</a></h3>
+					<p>A StevTech industry project using drone imagery to locate weeds for precision agriculture.</p></div>
+				</article>
+				<article data-category="Mapping">
+					<div><p class="project-label">Mapping and spatial systems</p><h3><a href="terrain-mapping.html">Terrain Mapping</a></h3>
+					<p>Case study in progress.</p></div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<footer class="home-contact" id="contact">
+		<h2>Contact</h2>
+		<p><a href="mailto:madhavdiwan7@gmail.com">Email</a> <a href="https://www.linkedin.com/in/madhav-diwan-3a1b08146/">LinkedIn</a></p>
+		<small>&copy; Madhav Diwan &middot; Base styles by <a href="https://html5up.net">HTML5 UP</a></small>
+	</footer>
 </body>
 </html>
